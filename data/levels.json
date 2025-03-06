@@ -1,1114 +1,975 @@
 [
     {
-        "date": "2025-03-05",
-        "level": 1,
-        "text": "Paris is always a good idea.",
-        "time": 17,
-        "character_key": "q,w,e,r,t,y,u,a,o,i,s,p,d,f,g,h,j,k,l,z,x,c,v,b,n,m",
-        "author": "Audrey Hepburn"
-    },
-    {
-        "date": "2025-03-06",
-        "level": 2,
-        "text": "God disguised as Michael Jordan.",
-        "time": 19,
-        "character_key": "q,w,e,r,t,y,u,i,s,p,a,d,g,f,o,h,j,k,l,z,x,c,v,b,n,m",
-        "author": "Larry Bird"
-    },
-    {
-        "date": "2025-03-07",
-        "level": 3,
-        "text": "All for one and one for all.",
-        "time": 19,
-        "character_key": "q,w,e,r,t,y,u,i,n,p,o,s,d,f,g,h,j,k,a,z,x,c,v,b,l,m",
-        "author": "Alexandre Dumas"
-    },
-    {
-        "date": "2025-03-08",
-        "level": 4,
-        "text": "I offer nothing more than simple facts, plain arguments and common sense.",
-        "time": 49,
-        "character_key": "q,w,t,r,m,y,u,i,p,a,e,s,d,f,g,h,j,k,l,z,x,c,v,b,n,o",
-        "author": "Thomas Paine"
-    },
-    {
-        "date": "2025-03-09",
-        "level": 5,
-        "text": "Never interrupt someone doing what you said couldn't be done.",
-        "time": 35,
-        "character_key": "q,w,n,r,o,y,u,i,e,p,a,s,d,f,g,h,j,k,l,z,x,c,v,b,t,m",
-        "author": "Amelia Earhart"
-    },
-    {
-        "date": "2025-03-10",
-        "level": 6,
-        "text": "No flying machine will ever fly from New York to Paris.",
-        "time": 25,
-        "character_key": "q,w,e,r,t,o,u,y,m,p,a,s,d,f,g,h,j,k,l,z,x,c,v,b,n,i",
-        "author": "Orville Wright"
-    },
-    {
-        "date": "2025-03-11",
-        "level": 7,
-        "text": "If I can sit down for freedom you can stand up for children.",
-        "time": 31,
-        "character_key": "q,w,v,r,e,y,u,i,t,p,a,s,d,f,g,h,n,k,l,z,x,c,j,b,o,m",
-        "author": "Rosa Parks"
-    },
-    {
-        "date": "2025-03-12",
-        "level": 8,
-        "text": "Attitude is a little thing that makes a big difference.",
-        "time": 27,
-        "character_key": "b,w,t,r,q,y,u,i,e,p,a,s,o,f,g,h,j,k,l,z,x,c,v,d,n,m",
-        "author": "Winston Churchill"
-    },
-    {
-        "date": "2025-03-13",
-        "level": 9,
-        "text": "Whether you think you can or you think you can't, you're right.",
-        "time": 40,
-        "character_key": "q,k,e,r,t,w,u,i,y,p,a,s,d,f,g,h,j,o,l,z,x,c,v,b,n,m",
-        "author": "Henry Ford"
-    },
-    {
-        "date": "2025-03-14",
-        "level": 10,
-        "text": "Some painters transform the sun into a yellow spot, others transform a yellow spot into the sun.",
-        "time": 56,
-        "character_key": "q,w,t,a,k,y,u,i,e,f,n,o,d,s,g,h,j,r,l,z,x,c,v,b,p,m",
-        "author": "Pablo Picasso"
-    },
-    {
-        "date": "2025-03-15",
-        "level": 11,
-        "text": "You can't blame gravity for falling in love.",
-        "time": 30,
-        "character_key": "k,w,b,r,t,a,u,i,o,p,z,s,d,f,g,h,j,e,l,q,x,c,v,y,n,m",
-        "author": "Albert Einstein"
-    },
-    {
-        "date": "2025-03-16",
-        "level": 12,
-        "text": "We shall never know all the good that a simple smile can do.",
-        "time": 40,
-        "character_key": "q,j,l,r,t,y,u,i,e,p,a,o,d,f,g,h,s,k,x,z,w,c,v,b,n,m",
-        "author": "Mother Teresa"
-    },
-    {
-        "date": "2025-03-17",
-        "level": 13,
-        "text": "Have more than you show. Speak less than you know.",
-        "time": 33,
-        "character_key": "q,h,j,r,m,y,u,i,t,p,e,s,d,f,g,o,w,k,l,z,x,c,v,b,n,a",
-        "author": "William Shakespeare"
+        "level":1,
+        "text":"Paris is always a good idea.",
+        "time":27,
+        "character_key":"q,w,e,r,t,y,u,a,o,i,s,p,d,f,g,h,j,k,l,z,x,c,v,b,n,m",
+        "Author":"Audrey Hepburn"
     },
     {
-        "date": "2025-03-18",
-        "level": 14,
-        "text": "Early to bed and early to rise makes a man healthy, wealthy and wise.",
-        "time": 39,
-        "character_key": "s,i,e,r,a,w,u,h,o,p,x,j,d,f,g,t,y,k,l,z,q,c,v,b,n,m",
-        "author": "Benjamin Franklin"
+        "level":2,
+        "text":"God disguised as Michael Jordan.",
+        "time":29,
+        "character_key":"q,w,e,r,t,y,u,i,s,p,a,d,g,f,o,h,j,k,l,z,x,c,v,b,n,m",
+        "Author":"Larry Bird"
     },
     {
-        "date": "2025-03-19",
-        "level": 15,
-        "text": "You can never cross the ocean until you have the courage to lose sight of the shore.",
-        "time": 53,
-        "character_key": "v,w,c,r,t,y,l,i,e,q,a,s,d,f,g,o,j,k,h,p,x,z,u,b,n,m",
-        "author": "Christopher Columbus"
+        "level":3,
+        "text":"All for one and one for all.",
+        "time":29,
+        "character_key":"q,w,e,r,t,y,u,i,n,p,o,s,d,f,g,h,j,k,a,z,x,c,v,b,l,m",
+        "Author":"Alexandre Dumas"
     },
     {
-        "date": "2025-03-20",
-        "level": 16,
-        "text": "I'm a godmother, that's a great thing to be. She calls me god for short, that's cute, I taught her that.",
-        "time": 80,
-        "character_key": "d,w,a,s,g,y,u,h,t,p,m,c,l,f,e,o,j,k,r,z,q,x,v,b,n,i",
-        "author": "Ellen DeGeneres"
+        "level":4,
+        "text":"I offer nothing more than simple facts, plain arguments and common sense.",
+        "time":59,
+        "character_key":"q,w,t,r,m,y,u,i,p,a,e,s,d,f,g,h,j,k,l,z,x,c,v,b,n,o",
+        "Author":"Thomas Paine"
     },
     {
-        "date": "2025-03-21",
-        "level": 17,
-        "text": "The scientific theory I like best is that the rings of Saturn are composed entirely of lost airline luggage.",
-        "time": 79,
-        "character_key": "q,w,y,r,t,h,u,i,s,p,x,e,d,f,o,a,j,k,n,z,l,c,v,b,g,m",
-        "author": "Mark Russell"
+        "level":5,
+        "text":"Never interrupt someone doing what you said couldn't be done.",
+        "time":45,
+        "character_key":"q,w,n,r,o,y,u,i,e,p,a,s,d,f,g,h,j,k,l,z,x,c,v,b,t,m",
+        "Author":"Amelia Earhart"
     },
     {
-        "date": "2025-03-22",
-        "level": 18,
-        "text": "Never, under any circumstances, take a sleeping pill and a laxative on the same night.",
-        "time": 57,
-        "character_key": "q,f,w,r,t,y,u,n,o,a,e,m,p,i,g,h,j,k,l,z,x,c,v,b,s,d",
-        "author": "Dave Barry"
+        "level":6,
+        "text":"No flying machine will ever fly from New York to Paris.",
+        "time":35,
+        "character_key":"q,w,e,r,t,o,u,y,m,p,a,s,d,f,g,h,j,k,l,z,x,c,v,b,n,i",
+        "Author":"Orville Wright"
     },
     {
-        "date": "2025-03-23",
-        "level": 19,
-        "text": "Better to remain silent and be thought a fool than to speak out and remove all doubt.",
-        "time": 56,
-        "character_key": "k,w,o,r,n,y,u,i,p,q,t,s,a,f,g,h,j,c,l,z,x,d,v,b,e,m",
-        "author": "Abraham Lincoln"
+        "level":7,
+        "text":"If I can sit down for freedom you can stand up for children.",
+        "time":41,
+        "character_key":"q,w,v,r,e,y,u,i,t,p,a,s,d,f,g,h,n,k,l,z,x,c,j,b,o,m",
+        "Author":"Rosa Parks"
     },
     {
-        "date": "2025-03-24",
-        "level": 20,
-        "text": "I will always choose a lazy person to do a difficult job because he will find an easy way to do it.",
-        "time": 70,
-        "character_key": "q,i,d,r,n,z,u,h,o,p,e,s,f,y,g,j,a,k,l,t,x,c,v,b,w,m",
-        "author": "Bill Gates"
+        "level":8,
+        "text":"Attitude is a little thing that makes a big difference.",
+        "time":37,
+        "character_key":"b,w,t,r,q,y,u,i,e,p,a,s,o,f,g,h,j,k,l,z,x,c,v,d,n,m",
+        "Author":"Winston Churchill"
     },
     {
-        "date": "2025-03-25",
-        "level": 21,
-        "text": "Go to heaven for the climate, hell for the company.",
-        "time": 32,
-        "character_key": "q,w,a,r,m,y,u,i,h,p,t,s,d,f,g,e,j,k,l,z,x,c,v,b,n,o",
-        "author": "Mark Twain"
+        "level":9,
+        "text":"Whether you think you can or you think you can't, you're right.",
+        "time":50,
+        "character_key":"q,k,e,r,t,w,u,i,y,p,a,s,d,f,g,h,j,o,l,z,x,c,v,b,n,m",
+        "Author":"Henry Ford"
     },
     {
-        "date": "2025-03-26",
-        "level": 22,
-        "text": "I love that he's never forgotten how he started.",
-        "time": 36,
-        "character_key": "q,w,e,r,s,b,u,i,y,p,a,o,d,h,g,v,j,k,l,z,x,c,t,f,n,m",
-        "author": "Michelle Obama"
+        "level":10,
+        "text":"Some painters transform the sun into a yellow spot, others transform a yellow spot into the sun.",
+        "time":66,
+        "character_key":"q,w,t,a,k,y,u,i,e,f,n,o,d,s,g,h,j,r,l,z,x,c,v,b,p,m",
+        "Author":"Pablo Picasso"
     },
     {
-        "date": "2025-03-27",
-        "level": 23,
-        "text": "Do one thing that scares you every day.",
-        "time": 31,
-        "character_key": "q,w,d,r,a,t,u,i,o,p,e,y,z,f,g,h,j,k,s,l,x,c,v,b,n,m\nq,w,d,r,a,t,u,i,o,p,e,y,z,f,g,h,j,k,s,l,x,c,v,b,n,m",
-        "author": "Eleanor Roosevelt"
+        "level":11,
+        "text":"You can't blame gravity for falling in love.",
+        "time":40,
+        "character_key":"k,w,b,r,t,a,u,i,o,p,z,s,d,f,g,h,j,e,l,q,x,c,v,y,n,m",
+        "Author":"Albert Einstein"
     },
     {
-        "date": "2025-03-28",
-        "level": 24,
-        "text": "One sometimes finds what one is not looking for.",
-        "time": 38,
-        "character_key": "q,w,e,r,t,y,x,m,u,p,a,f,d,i,g,h,j,s,l,z,k,c,v,b,n,o",
-        "author": "Alexander Fleming"
+        "level":12,
+        "text":"We shall never know all the good that a simple smile can do.",
+        "time":50,
+        "character_key":"q,j,l,r,t,y,u,i,e,p,a,o,d,f,g,h,s,k,x,z,w,c,v,b,n,m",
+        "Author":"Mother Teresa"
     },
     {
-        "date": "2025-03-29",
-        "level": 25,
-        "text": "I've failed over and over and over again in my life. And that is why I succeed.",
-        "time": 56,
-        "character_key": "p,w,o,r,t,y,u,q,a,v,h,s,m,d,g,e,j,k,l,z,f,c,i,b,n,x",
-        "author": "Michael Jordan"
+        "level":13,
+        "text":"Have more than you show. Speak less than you know.",
+        "time":43,
+        "character_key":"q,h,j,r,m,y,u,i,t,p,e,s,d,f,g,o,w,k,l,z,x,c,v,b,n,a",
+        "Author":"William Shakespeare"
     },
     {
-        "date": "2025-03-30",
-        "level": 26,
-        "text": "I still have my feet on the ground, I just wear better shoes.",
-        "time": 43,
-        "character_key": "q,w,b,r,t,y,g,i,e,p,a,j,d,f,o,h,z,k,l,u,x,c,v,s,n,m",
-        "author": "Oprah Winfrey"
+        "level":14,
+        "text":"Early to bed and early to rise makes a man healthy, wealthy and wise.",
+        "time":49,
+        "character_key":"s,i,e,r,a,w,u,h,o,p,x,j,d,f,g,t,y,k,l,z,q,c,v,b,n,m",
+        "Author":"Benjamin Franklin"
     },
     {
-        "date": "2025-03-31",
-        "level": 27,
-        "text": "If I have a thousand ideas and only one turns into be good, I am satisfied.",
-        "time": 53,
-        "character_key": "z,q,e,r,t,y,s,w,i,p,n,d,a,f,g,h,j,k,l,u,x,c,v,b,o,m",
-        "author": "Alfred Nobel"
+        "level":15,
+        "text":"You can never cross the ocean until you have the courage to lose sight of the shore.",
+        "time":63,
+        "character_key":"v,w,c,r,t,y,l,i,e,q,a,s,d,f,g,o,j,k,h,p,x,z,u,b,n,m",
+        "Author":"Christopher Columbus"
     },
     {
-        "date": "2025-04-01",
-        "level": 28,
-        "text": "Aerodynamics are for people who can't build engines.",
-        "time": 42,
-        "character_key": "q,w,a,r,t,y,u,i,n,p,m,s,o,d,v,h,j,k,l,z,x,e,f,b,c,g",
-        "author": "Enzo Ferrari"
+        "level":16,
+        "text":"I'm a godmother, that's a great thing to be. She calls me god for short, that's cute, I taught her that.",
+        "time":90,
+        "character_key":"d,w,a,s,g,y,u,h,t,p,m,c,l,f,e,o,j,k,r,z,q,x,v,b,n,i",
+        "Author":"Ellen DeGeneres"
     },
     {
-        "date": "2025-04-02",
-        "level": 29,
-        "text": "If you took acting away from me, I would stop breathing.",
-        "time": 41,
-        "character_key": "k,g,e,w,t,y,u,r,v,p,o,s,d,f,a,h,j,i,l,z,x,c,q,b,n,m",
-        "author": "Ingrid Bergman"
+        "level":17,
+        "text":"The scientific theory I like best is that the rings of Saturn are composed entirely of lost airline luggage.",
+        "time":89,
+        "character_key":"q,w,y,r,t,h,u,i,s,p,x,e,d,f,o,a,j,k,n,z,l,c,v,b,g,m",
+        "Author":"Mark Russell"
     },
     {
-        "date": "2025-04-03",
-        "level": 30,
-        "text": "The best way to find yourself is to lose yourself in the service of others.",
-        "time": 48,
-        "character_key": "p,w,e,r,i,y,o,q,u,n,a,t,d,f,g,h,j,k,l,z,x,c,v,s,b,m",
-        "author": "Mahatma Gandhi"
+        "level":18,
+        "text":"Never, under any circumstances, take a sleeping pill and a laxative on the same night.",
+        "time":67,
+        "character_key":"q,f,w,r,t,y,u,n,o,a,e,m,p,i,g,h,j,k,l,z,x,c,v,b,s,d",
+        "Author":"Dave Barry"
     },
     {
-        "date": "2025-04-04",
-        "level": 31,
-        "text": "Impossible is a word to be found only in the dictionary of fools.",
-        "time": 51,
-        "character_key": "t,j,d,r,o,n,u,e,w,p,a,l,s,y,g,h,q,k,f,z,x,c,v,b,i,m",
-        "author": "Napoleon Bonaparte"
+        "level":19,
+        "text":"Better to remain silent and be thought a fool than to speak out and remove all doubt.",
+        "time":66,
+        "character_key":"k,w,o,r,n,y,u,i,p,q,t,s,a,f,g,h,j,c,l,z,x,d,v,b,e,m",
+        "Author":"Abraham Lincoln"
     },
     {
-        "date": "2025-04-05",
-        "level": 32,
-        "text": "If you even dream of beating me you'd better wake up and apologize.",
-        "time": 57,
-        "character_key": "q,i,x,w,r,y,u,g,o,p,a,s,d,f,e,h,t,k,l,z,j,c,v,b,n,m",
-        "author": "Muhammad Ali"
+        "level":20,
+        "text":"I will always choose a lazy person to do a difficult job because he will find an easy way to do it.",
+        "time":80,
+        "character_key":"q,i,d,r,n,z,u,h,o,p,e,s,f,y,g,j,a,k,l,t,x,c,v,b,w,m",
+        "Author":"Bill Gates"
     },
     {
-        "date": "2025-04-06",
-        "level": 33,
-        "text": "Those who'll play with cats must expect to be scratched.",
-        "time": 46,
-        "character_key": "q,o,h,r,j,y,u,i,x,p,a,s,d,f,g,t,z,k,l,w,e,c,v,b,n,m",
-        "author": "Miguel de Cervantes"
+        "level":21,
+        "text":"Go to heaven for the climate, hell for the company.",
+        "time":42,
+        "character_key":"q,w,a,r,m,y,u,i,h,p,t,s,d,f,g,e,j,k,l,z,x,c,v,b,n,o",
+        "Author":"Mark Twain"
     },
     {
-        "date": "2025-04-07",
-        "level": 34,
-        "text": "I've got to keep breathing. It'll be my worst business mistake if I don't.",
-        "time": 57,
-        "character_key": "i,w,v,r,b,y,u,n,t,p,a,e,d,f,g,h,j,o,l,z,x,c,q,s,k,m",
-        "author": "Steve Martin"
+        "level":22,
+        "text":"I love that he's never forgotten how he started.",
+        "time":46,
+        "character_key":"q,w,e,r,s,b,u,i,y,p,a,o,d,h,g,v,j,k,l,z,x,c,t,f,n,m",
+        "Author":"Michelle Obama"
     },
     {
-        "date": "2025-04-08",
-        "level": 35,
-        "text": "I have great faith in fools: self-confidence, my friends call it.",
-        "time": 56,
-        "character_key": "q,r,n,g,t,y,u,z,i,p,a,s,d,o,e,h,j,k,l,v,x,c,w,b,f,m",
-        "author": "Edgar Allan Poe"
+        "level":23,
+        "text":"Do one thing that scares you every day.",
+        "time":41,
+        "character_key":"q,w,d,r,a,t,u,i,o,p,e,y,z,f,g,h,j,k,s,l,x,c,v,b,n,m\nq,w,d,r,a,t,u,i,o,p,e,y,z,f,g,h,j,k,s,l,x,c,v,b,n,m",
+        "Author":"Eleanor Roosevelt"
     },
     {
-        "date": "2025-04-09",
-        "level": 36,
-        "text": "If your only goal is to become rich, you will never achieve it.",
-        "time": 50,
-        "character_key": "w,n,i,r,j,y,u,t,e,p,a,s,d,f,g,h,q,k,l,z,x,c,v,b,o,m",
-        "author": "John D. Rockefeller"
+        "level":24,
+        "text":"One sometimes finds what one is not looking for.",
+        "time":48,
+        "character_key":"q,w,e,r,t,y,x,m,u,p,a,f,d,i,g,h,j,s,l,z,k,c,v,b,n,o",
+        "Author":"Alexander Fleming"
     },
     {
-        "date": "2025-04-10",
-        "level": 37,
-        "text": "When it comes to luck, you make your own.",
-        "time": 33,
-        "character_key": "q,o,w,r,t,y,h,i,m,u,a,s,d,f,g,e,j,k,l,z,x,c,v,p,n,b",
-        "author": "Bruce Springsteen"
+        "level":25,
+        "text":"I've failed over and over and over again in my life. And that is why I succeed.",
+        "time":66,
+        "character_key":"p,w,o,r,t,y,u,q,a,v,h,s,m,d,g,e,j,k,l,z,f,c,i,b,n,x",
+        "Author":"Michael Jordan"
     },
     {
-        "date": "2025-04-11",
-        "level": 38,
-        "text": "I refuse to join any club that would have me as a member.",
-        "time": 42,
-        "character_key": "q,w,m,o,t,y,u,i,e,p,r,s,d,f,g,h,x,a,l,z,k,c,v,b,n,j",
-        "author": "Groucho Marx"
+        "level":26,
+        "text":"I still have my feet on the ground, I just wear better shoes.",
+        "time":53,
+        "character_key":"q,w,b,r,t,y,g,i,e,p,a,j,d,f,o,h,z,k,l,u,x,c,v,s,n,m",
+        "Author":"Oprah Winfrey"
     },
     {
-        "date": "2025-04-12",
-        "level": 39,
-        "text": "They say marriages are made in Heaven. But so is thunder and lightning.",
-        "time": 53,
-        "character_key": "q,w,a,r,h,y,u,i,o,z,t,m,d,f,s,p,j,k,l,g,x,c,v,b,e,n",
-        "author": "Clint Eastwood"
+        "level":27,
+        "text":"If I have a thousand ideas and only one turns into be good, I am satisfied.",
+        "time":63,
+        "character_key":"z,q,e,r,t,y,s,w,i,p,n,d,a,f,g,h,j,k,l,u,x,c,v,b,o,m",
+        "Author":"Alfred Nobel"
     },
     {
-        "date": "2025-04-13",
-        "level": 40,
-        "text": "Always borrow money from a pessimist. He won\u2019t expect it back.",
-        "time": 52,
-        "character_key": "c,l,o,r,t,y,u,i,w,p,v,s,d,f,g,h,j,k,a,z,x,m,q,b,n,e",
-        "author": "Oscar Wilde"
+        "level":28,
+        "text":"Aerodynamics are for people who can't build engines.",
+        "time":52,
+        "character_key":"q,w,a,r,t,y,u,i,n,p,m,s,o,d,v,h,j,k,l,z,x,e,f,b,c,g",
+        "Author":"Enzo Ferrari"
     },
     {
-        "date": "2025-04-14",
-        "level": 41,
-        "text": "Education is a progressive discovery of our own ignorance.",
-        "time": 40,
-        "character_key": "q,w,s,e,t,y,r,i,b,p,a,o,d,f,g,h,l,j,c,z,x,u,v,k,n,m",
-        "author": "Will Durant"
+        "level":29,
+        "text":"If you took acting away from me, I would stop breathing.",
+        "time":51,
+        "character_key":"k,g,e,w,t,y,u,r,v,p,o,s,d,f,a,h,j,i,l,z,x,c,q,b,n,m",
+        "Author":"Ingrid Bergman"
     },
     {
-        "date": "2025-04-15",
-        "level": 42,
-        "text": "Never bend your head. Always hold it high. Look the world straight in the eye.",
-        "time": 56,
-        "character_key": "q,d,p,w,t,h,u,i,o,r,l,s,m,f,g,e,j,k,y,z,x,c,v,b,n,a",
-        "author": "Hellen Keller"
+        "level":30,
+        "text":"The best way to find yourself is to lose yourself in the service of others.",
+        "time":58,
+        "character_key":"p,w,e,r,i,y,o,q,u,n,a,t,d,f,g,h,j,k,l,z,x,c,v,s,b,m",
+        "Author":"Mahatma Gandhi"
     },
     {
-        "date": "2025-04-16",
-        "level": 43,
-        "text": "Life is the flower for which love is the honey.",
-        "time": 38,
-        "character_key": "v,l,o,r,t,y,u,e,f,p,a,s,d,w,i,h,j,k,b,z,x,c,g,q,n,m",
-        "author": "Victor Hugo"
+        "level":31,
+        "text":"Impossible is a word to be found only in the dictionary of fools.",
+        "time":61,
+        "character_key":"t,j,d,r,o,n,u,e,w,p,a,l,s,y,g,h,q,k,f,z,x,c,v,b,i,m",
+        "Author":"Napoleon Bonaparte"
     },
     {
-        "date": "2025-04-17",
-        "level": 44,
-        "text": "I was 18 when I first started working at a restaurant. I was a dishwasher.",
-        "time": 47,
-        "character_key": "j,e,i,t,k,y,u,q,o,s,a,w,d,f,g,h,r,p,l,z,x,c,v,b,n,m",
-        "author": "Ferra\u0301n Adria\u0301"
+        "level":32,
+        "text":"If you even dream of beating me you'd better wake up and apologize.",
+        "time":67,
+        "character_key":"q,i,x,w,r,y,u,g,o,p,a,s,d,f,e,h,t,k,l,z,j,c,v,b,n,m",
+        "Author":"Muhammad Ali"
     },
     {
-        "date": "2025-04-18",
-        "level": 45,
-        "text": "You just can't beat the person who never gives up.",
-        "time": 40,
-        "character_key": "q,x,p,r,s,w,o,i,y,g,e,u,f,n,t,h,j,k,l,z,d,c,v,b,a,m",
-        "author": "Babe Ruth"
+        "level":33,
+        "text":"Those who'll play with cats must expect to be scratched.",
+        "time":56,
+        "character_key":"q,o,h,r,j,y,u,i,x,p,a,s,d,f,g,t,z,k,l,w,e,c,v,b,n,m",
+        "Author":"Miguel de Cervantes"
     },
     {
-        "date": "2025-04-19",
-        "level": 46,
-        "text": "Intelligence without ambition is a bird without wings.",
-        "time": 39,
-        "character_key": "q,r,e,t,i,y,u,f,m,o,a,s,d,p,g,h,j,k,l,z,x,c,v,b,n,w",
-        "author": "Salvador Dali\u0301"
+        "level":34,
+        "text":"I've got to keep breathing. It'll be my worst business mistake if I don't.",
+        "time":67,
+        "character_key":"i,w,v,r,b,y,u,n,t,p,a,e,d,f,g,h,j,o,l,z,x,c,q,s,k,m",
+        "Author":"Steve Martin"
     },
     {
-        "date": "2025-04-20",
-        "level": 47,
-        "text": "Science is organized knowledge. Wisdom is organized life.",
-        "time": 44,
-        "character_key": "p,w,e,d,t,y,u,o,n,r,a,s,i,f,g,q,j,k,l,z,x,b,v,h,c,m",
-        "author": "Immanuel Kant"
+        "level":35,
+        "text":"I have great faith in fools: self-confidence, my friends call it.",
+        "time":66,
+        "character_key":"q,r,n,g,t,y,u,z,i,p,a,s,d,o,e,h,j,k,l,v,x,c,w,b,f,m",
+        "Author":"Edgar Allan Poe"
     },
     {
-        "date": "2025-04-21",
-        "level": 48,
-        "text": "You're dead if you aim only for kids. Adults are only kids grown up, anyway.",
-        "time": 52,
-        "character_key": "q,w,e,n,t,i,u,a,x,p,r,s,o,f,g,y,j,k,d,z,h,c,v,b,l,m",
-        "author": "Walt Disney"
+        "level":36,
+        "text":"If your only goal is to become rich, you will never achieve it.",
+        "time":60,
+        "character_key":"w,n,i,r,j,y,u,t,e,p,a,s,d,f,g,h,q,k,l,z,x,c,v,b,o,m",
+        "Author":"John D. Rockefeller"
     },
     {
-        "date": "2025-04-22",
-        "level": 49,
-        "text": "Nothing in life is to be feared. It is only to be understood.",
-        "time": 41,
-        "character_key": "q,w,b,i,o,y,u,t,v,d,a,s,e,f,g,h,j,k,l,z,x,c,p,r,n,m",
-        "author": "Marie Curie"
+        "level":37,
+        "text":"When it comes to luck, you make your own.",
+        "time":43,
+        "character_key":"q,o,w,r,t,y,h,i,m,u,a,s,d,f,g,e,j,k,l,z,x,c,v,p,n,b",
+        "Author":"Bruce Springsteen"
     },
     {
-        "date": "2025-04-23",
-        "level": 50,
-        "text": "My favorite machine at the gym is the vending machine.",
-        "time": 38,
-        "character_key": "q,y,i,r,t,c,w,m,o,p,a,s,d,f,g,e,j,k,l,z,x,h,v,b,n,u",
-        "author": "Caroline Rhea"
+        "level":38,
+        "text":"I refuse to join any club that would have me as a member.",
+        "time":52,
+        "character_key":"q,w,m,o,t,y,u,i,e,p,r,s,d,f,g,h,x,a,l,z,k,c,v,b,n,j",
+        "Author":"Groucho Marx"
     },
     {
-        "date": "2025-04-24",
-        "level": 51,
-        "text": "It is important to remember that we all have magic inside us.",
-        "time": 41,
-        "character_key": "q,w,x,r,t,y,u,d,o,p,a,i,b,f,g,h,j,k,l,z,m,c,v,s,n,e",
-        "author": "J. K. Rowling"
+        "level":39,
+        "text":"They say marriages are made in Heaven. But so is thunder and lightning.",
+        "time":63,
+        "character_key":"q,w,a,r,h,y,u,i,o,z,t,m,d,f,s,p,j,k,l,g,x,c,v,b,e,n",
+        "Author":"Clint Eastwood"
     },
     {
-        "date": "2025-04-25",
-        "level": 52,
-        "text": "A woman's guess is much more accurate than a man's certainty.",
-        "time": 45,
-        "character_key": "q,w,e,r,c,y,m,u,o,b,p,a,d,f,g,h,i,k,l,z,x,s,v,j,n,t",
-        "author": "Rudyard Kipling"
+        "level":40,
+        "text":"Always borrow money from a pessimist. He won\u2019t expect it back.",
+        "time":62,
+        "character_key":"c,l,o,r,t,y,u,i,w,p,v,s,d,f,g,h,j,k,a,z,x,m,q,b,n,e",
+        "Author":"Oscar Wilde"
     },
     {
-        "date": "2025-04-26",
-        "level": 53,
-        "text": "The best things in life are free. The second-best are very expensive.",
-        "time": 46,
-        "character_key": "q,w,j,i,e,y,u,t,o,p,a,s,d,f,g,h,k,v,l,z,r,x,m,b,n,c",
-        "author": "Coco Chanel"
+        "level":41,
+        "text":"Education is a progressive discovery of our own ignorance.",
+        "time":50,
+        "character_key":"q,w,s,e,t,y,r,i,b,p,a,o,d,f,g,h,l,j,c,z,x,u,v,k,n,m",
+        "Author":"Will Durant"
     },
     {
-        "date": "2025-04-27",
-        "level": 54,
-        "text": "An optimist is a person who starts a new diet on Thanks-giving Day.",
-        "time": 57,
-        "character_key": "v,w,o,p,u,y,i,e,a,g,c,s,r,z,t,d,j,k,l,q,x,f,h,b,n,m",
-        "author": "Irv Kupcinet"
+        "level":42,
+        "text":"Never bend your head. Always hold it high. Look the world straight in the eye.",
+        "time":66,
+        "character_key":"q,d,p,w,t,h,u,i,o,r,l,s,m,f,g,e,j,k,y,z,x,c,v,b,n,a",
+        "Author":"Hellen Keller"
     },
     {
-        "date": "2025-04-28",
-        "level": 55,
-        "text": "She had a smile I would accept as my last view of the earth.",
-        "time": 48,
-        "character_key": "q,h,a,r,t,y,u,i,w,p,s,m,d,f,g,e,j,k,o,z,x,c,v,b,n,l",
-        "author": "Wallace Stegner"
+        "level":43,
+        "text":"Life is the flower for which love is the honey.",
+        "time":48,
+        "character_key":"v,l,o,r,t,y,u,e,f,p,a,s,d,w,i,h,j,k,b,z,x,c,g,q,n,m",
+        "Author":"Victor Hugo"
     },
     {
-        "date": "2025-04-29",
-        "level": 56,
-        "text": "People who think they know everything are a great annoyance to those of us who do.",
-        "time": 64,
-        "character_key": "q,a,e,o,h,n,u,i,c,p,t,s,d,f,g,y,j,k,l,z,x,m,v,b,r,w",
-        "author": "Isaac Asimov"
+        "level":44,
+        "text":"I was 18 when I first started working at a restaurant. I was a dishwasher.",
+        "time":57,
+        "character_key":"j,e,i,t,k,y,u,q,o,s,a,w,d,f,g,h,r,p,l,z,x,c,v,b,n,m",
+        "Author":"Ferra\u0301n Adria\u0301"
     },
     {
-        "date": "2025-04-30",
-        "level": 57,
-        "text": "The only mystery in life is why the kamikaze pilots wore helmets.",
-        "time": 45,
-        "character_key": "q,w,m,r,o,z,u,k,i,p,a,s,d,f,g,h,j,e,l,v,x,c,t,b,n,y",
-        "author": "Al Mcguire"
+        "level":45,
+        "text":"You just can't beat the person who never gives up.",
+        "time":50,
+        "character_key":"q,x,p,r,s,w,o,i,y,g,e,u,f,n,t,h,j,k,l,z,d,c,v,b,a,m",
+        "Author":"Babe Ruth"
     },
     {
-        "date": "2025-05-01",
-        "level": 58,
-        "text": "We may have all come on different ships, but we are in the same boat now.",
-        "time": 59,
-        "character_key": "q,w,a,r,t,y,u,i,e,p,h,o,d,n,g,f,j,k,l,z,x,c,v,b,m,s",
-        "author": "Martin Luther King Jr."
+        "level":46,
+        "text":"Intelligence without ambition is a bird without wings.",
+        "time":49,
+        "character_key":"q,r,e,t,i,y,u,f,m,o,a,s,d,p,g,h,j,k,l,z,x,c,v,b,n,w",
+        "Author":"Salvador Dali\u0301"
     },
     {
-        "date": "2025-05-02",
-        "level": 59,
-        "text": "The best road to progress is freedom's road.",
-        "time": 35,
-        "character_key": "q,w,r,f,y,u,g,i,t,p,e,a,d,o,s,h,j,k,l,z,x,c,v,b,n,m",
-        "author": "John F. Kennedy"
+        "level":47,
+        "text":"Science is organized knowledge. Wisdom is organized life.",
+        "time":54,
+        "character_key":"p,w,e,d,t,y,u,o,n,r,a,s,i,f,g,q,j,k,l,z,x,b,v,h,c,m",
+        "Author":"Immanuel Kant"
     },
     {
-        "date": "2025-05-03",
-        "level": 60,
-        "text": "I have never advocated war except as a means of peace.",
-        "time": 43,
-        "character_key": "q,w,k,r,t,y,u,i,p,h,e,s,d,f,g,n,j,b,l,z,c,a,v,o,x,m",
-        "author": "Ulysses S. Grant"
+        "level":48,
+        "text":"You're dead if you aim only for kids. Adults are only kids grown up, anyway.",
+        "time":62,
+        "character_key":"q,w,e,n,t,i,u,a,x,p,r,s,o,f,g,y,j,k,d,z,h,c,v,b,l,m",
+        "Author":"Walt Disney"
     },
     {
-        "date": "2025-05-04",
-        "level": 61,
-        "text": "We don't stop playing because we grow; we grow old because we stop playing.",
-        "time": 56,
-        "character_key": "q,w,n,r,t,b,u,y,s,p,a,l,d,f,g,h,j,k,e,z,x,c,v,o,i,m",
-        "author": "George Bernard Shaw"
+        "level":49,
+        "text":"Nothing in life is to be feared. It is only to be understood.",
+        "time":51,
+        "character_key":"q,w,b,i,o,y,u,t,v,d,a,s,e,f,g,h,j,k,l,z,x,c,p,r,n,m",
+        "Author":"Marie Curie"
     },
     {
-        "date": "2025-05-05",
-        "level": 62,
-        "text": "As I learned from growing up, you don't mess with your grandmother.",
-        "time": 47,
-        "character_key": "q,w,a,r,t,g,m,u,y,p,o,s,d,f,i,h,j,k,l,z,x,c,v,b,n,e",
-        "author": "Prince William"
+        "level":50,
+        "text":"My favorite machine at the gym is the vending machine.",
+        "time":48,
+        "character_key":"q,y,i,r,t,c,w,m,o,p,a,s,d,f,g,e,j,k,l,z,x,h,v,b,n,u",
+        "Author":"Caroline Rhea"
     },
     {
-        "date": "2025-05-06",
-        "level": 63,
-        "text": "I can't really envision a time when I'm not shooting something.",
-        "time": 49,
-        "character_key": "q,w,e,r,t,y,u,p,i,b,a,l,d,f,g,h,j,k,n,z,x,c,v,s,m,o",
-        "author": "Martin Scorsese"
+        "level":51,
+        "text":"It is important to remember that we all have magic inside us.",
+        "time":51,
+        "character_key":"q,w,x,r,t,y,u,d,o,p,a,i,b,f,g,h,j,k,l,z,m,c,v,s,n,e",
+        "Author":"J. K. Rowling"
     },
     {
-        "date": "2025-05-07",
-        "level": 64,
-        "text": "If I have seen further than others, it is by standing upon the shoulders of giants.",
-        "time": 59,
-        "character_key": "q,w,h,r,m,y,a,i,t,p,o,u,d,f,g,s,j,k,l,z,x,c,v,b,n,e",
-        "author": "Isaac Newton"
+        "level":52,
+        "text":"A woman's guess is much more accurate than a man's certainty.",
+        "time":55,
+        "character_key":"q,w,e,r,c,y,m,u,o,b,p,a,d,f,g,h,i,k,l,z,x,s,v,j,n,t",
+        "Author":"Rudyard Kipling"
     },
     {
-        "date": "2025-05-08",
-        "level": 65,
-        "text": "The roots of education are bitter, but the fruit is sweet.",
-        "time": 42,
-        "character_key": "q,w,a,r,o,y,i,e,u,b,p,s,d,f,g,h,j,k,l,z,x,c,v,t,n,m",
-        "author": "Aristotle"
+        "level":53,
+        "text":"The best things in life are free. The second-best are very expensive.",
+        "time":56,
+        "character_key":"q,w,j,i,e,y,u,t,o,p,a,s,d,f,g,h,k,v,l,z,r,x,m,b,n,c",
+        "Author":"Coco Chanel"
     },
     {
-        "date": "2025-05-09",
-        "level": 66,
-        "text": "Winning isn't everything, but wanting to win is.",
-        "time": 40,
-        "character_key": "t,l,i,r,g,y,u,n,o,p,a,s,d,f,e,h,j,k,q,z,x,c,v,b,w,m",
-        "author": "Vince Lombardi"
+        "level":54,
+        "text":"An optimist is a person who starts a new diet on Thanks-giving Day.",
+        "time":67,
+        "character_key":"v,w,o,p,u,y,i,e,a,g,c,s,r,z,t,d,j,k,l,q,x,f,h,b,n,m",
+        "Author":"Irv Kupcinet"
     },
     {
-        "date": "2025-05-10",
-        "level": 67,
-        "text": "Everyone thinks of changing the world, but no one thinks of changing himself.",
-        "time": 56,
-        "character_key": "q,o,b,r,a,y,u,i,n,p,e,s,d,f,t,h,j,k,l,z,x,c,v,w,g,m",
-        "author": "Leo Tolstoy"
+        "level":55,
+        "text":"She had a smile I would accept as my last view of the earth.",
+        "time":58,
+        "character_key":"q,h,a,r,t,y,u,i,w,p,s,m,d,f,g,e,j,k,o,z,x,c,v,b,n,l",
+        "Author":"Wallace Stegner"
     },
     {
-        "date": "2025-05-11",
-        "level": 68,
-        "text": "Never doubt that a small group of thoughtful, committed citizens can change the world;indeed, it's the only thing that ever has. ",
-        "time": 81,
-        "character_key": "y,w,a,t,o,p,i,e,u,n,s,q,d,f,g,h,j,k,l,z,x,c,v,b,r,m",
-        "author": "Margaret Mead"
+        "level":56,
+        "text":"People who think they know everything are a great annoyance to those of us who do.",
+        "time":74,
+        "character_key":"q,a,e,o,h,n,u,i,c,p,t,s,d,f,g,y,j,k,l,z,x,m,v,b,r,w",
+        "Author":"Isaac Asimov"
     },
     {
-        "date": "2025-05-12",
-        "level": 69,
-        "text": "I did not have sexual relations with that woman.",
-        "time": 32,
-        "character_key": "q,w,o,r,m,y,u,v,a,t,i,e,d,f,g,h,j,k,l,z,s,c,p,b,n,x",
-        "author": "Bill Clinton"
+        "level":57,
+        "text":"The only mystery in life is why the kamikaze pilots wore helmets.",
+        "time":55,
+        "character_key":"q,w,m,r,o,z,u,k,i,p,a,s,d,f,g,h,j,e,l,v,x,c,t,b,n,y",
+        "Author":"Al Mcguire"
     },
     {
-        "date": "2025-05-13",
-        "level": 70,
-        "text": "One language sets you in a corridor for life. Two languages open every door along the way.",
-        "time": 60,
-        "character_key": "q,w,o,r,l,y,a,i,b,t,e,g,d,f,u,h,j,k,s,z,x,c,v,p,n,m",
-        "author": "Frank Smith"
+        "level":58,
+        "text":"We may have all come on different ships, but we are in the same boat now.",
+        "time":69,
+        "character_key":"q,w,a,r,t,y,u,i,e,p,h,o,d,n,g,f,j,k,l,z,x,c,v,b,m,s",
+        "Author":"Martin Luther King Jr."
     },
     {
-        "date": "2025-05-14",
-        "level": 71,
-        "text": "Nothing is as important as passion. No matter what you want to do with your life, be passionate.",
-        "time": 69,
-        "character_key": "q,w,o,x,a,y,u,i,r,n,e,t,d,f,g,h,j,k,l,z,p,c,v,b,m,s",
-        "author": "Jon Bon Jovi"
+        "level":59,
+        "text":"The best road to progress is freedom's road.",
+        "time":45,
+        "character_key":"q,w,r,f,y,u,g,i,t,p,e,a,d,o,s,h,j,k,l,z,x,c,v,b,n,m",
+        "Author":"John F. Kennedy"
     },
     {
-        "date": "2025-05-15",
-        "level": 72,
-        "text": "This is one small step for a man, one giant leap for mankind.",
-        "time": 42,
-        "character_key": "q,p,e,r,w,y,u,t,a,d,i,o,l,f,g,h,j,k,m,z,x,c,v,b,n,s",
-        "author": "Neil Armstrong"
+        "level":60,
+        "text":"I have never advocated war except as a means of peace.",
+        "time":53,
+        "character_key":"q,w,k,r,t,y,u,i,p,h,e,s,d,f,g,n,j,b,l,z,c,a,v,o,x,m",
+        "Author":"Ulysses S. Grant"
     },
     {
-        "date": "2025-05-16",
-        "level": 73,
-        "text": "My mom always tells me that imperfections equal beauty. All of us are imperfect.",
-        "time": 63,
-        "character_key": "q,w,o,r,t,y,u,i,m,f,e,s,d,a,g,h,j,k,l,z,x,p,n,b,v,c",
-        "author": "Miley Cyrus"
+        "level":61,
+        "text":"We don't stop playing because we grow; we grow old because we stop playing.",
+        "time":66,
+        "character_key":"q,w,n,r,t,b,u,y,s,p,a,l,d,f,g,h,j,k,e,z,x,c,v,o,i,m",
+        "Author":"George Bernard Shaw"
     },
     {
-        "date": "2025-05-17",
-        "level": 74,
-        "text": "I have not failed. I've just found 10,000 ways that won't work.",
-        "time": 55,
-        "character_key": "q,f,v,r,j,y,t,u,e,p,h,s,d,i,g,o,w,k,l,z,x,c,a,b,n,m",
-        "author": "Thomas A. Edison"
+        "level":62,
+        "text":"As I learned from growing up, you don't mess with your grandmother.",
+        "time":57,
+        "character_key":"q,w,a,r,t,g,m,u,y,p,o,s,d,f,i,h,j,k,l,z,x,c,v,b,n,e",
+        "Author":"Prince William"
     },
     {
-        "date": "2025-05-18",
-        "level": 75,
-        "text": "Life is like an onion. You peel it off one layer at a time, and sometimes you weep.",
-        "time": 67,
-        "character_key": "q,n,l,r,o,p,u,i,y,f,a,s,d,e,g,h,j,k,v,z,x,c,w,b,t,m",
-        "author": "Carl Sandburg"
+        "level":63,
+        "text":"I can't really envision a time when I'm not shooting something.",
+        "time":59,
+        "character_key":"q,w,e,r,t,y,u,p,i,b,a,l,d,f,g,h,j,k,n,z,x,c,v,s,m,o",
+        "Author":"Martin Scorsese"
     },
     {
-        "date": "2025-05-19",
-        "level": 76,
-        "text": "Vision is the art of seeing things invisible.",
-        "time": 62,
-        "character_key": "q,w,a,r,e,y,u,g,o,p,i,v,d,f,n,t,j,k,l,z,x,c,h,b,s,m",
-        "author": "Jonathan Swift"
+        "level":64,
+        "text":"If I have seen further than others, it is by standing upon the shoulders of giants.",
+        "time":69,
+        "character_key":"q,w,h,r,m,y,a,i,t,p,o,u,d,f,g,s,j,k,l,z,x,c,v,b,n,e",
+        "Author":"Isaac Newton"
     },
     {
-        "date": "2025-05-20",
-        "level": 77,
-        "text": "If I want to knock a story off the front page, I just change my hairstyle.",
-        "time": 43,
-        "character_key": "y,w,h,r,n,e,u,v,a,p,i,s,d,f,g,t,j,k,l,z,x,c,q,b,o,m",
-        "author": "Hillary Clinton"
+        "level":65,
+        "text":"The roots of education are bitter, but the fruit is sweet.",
+        "time":52,
+        "character_key":"q,w,a,r,o,y,i,e,u,b,p,s,d,f,g,h,j,k,l,z,x,c,v,t,n,m",
+        "Author":"Aristotle"
     },
     {
-        "date": "2025-05-21",
-        "level": 78,
-        "text": "Wear a smile and have friends; wear a scowl and have wrinkles.",
-        "time": 58,
-        "character_key": "p,q,a,e,t,y,u,i,o,l,w,r,d,f,g,h,j,k,s,z,x,c,v,b,n,m",
-        "author": "George Eliot"
+        "level":66,
+        "text":"Winning isn't everything, but wanting to win is.",
+        "time":50,
+        "character_key":"t,l,i,r,g,y,u,n,o,p,a,s,d,f,e,h,j,k,q,z,x,c,v,b,w,m",
+        "Author":"Vince Lombardi"
     },
     {
-        "date": "2025-05-22",
-        "level": 79,
-        "text": "My smile is my favorite part of my body. I think a smile can make your whole body.",
-        "time": 34,
-        "character_key": "t,w,s,r,b,g,u,i,a,p,e,y,d,o,q,h,j,k,l,z,x,c,v,f,n,m",
-        "author": "Serena Williams"
+        "level":67,
+        "text":"Everyone thinks of changing the world, but no one thinks of changing himself.",
+        "time":66,
+        "character_key":"q,o,b,r,a,y,u,i,n,p,e,s,d,f,t,h,j,k,l,z,x,c,v,w,g,m",
+        "Author":"Leo Tolstoy"
     },
     {
-        "date": "2025-05-23",
-        "level": 80,
-        "text": "I would like to die on Mars. Just not on impact.",
-        "time": 32,
-        "character_key": "q,o,e,r,m,y,u,k,i,p,t,s,d,f,a,h,j,b,w,z,x,c,v,g,n,l",
-        "author": "Elon Musk"
+        "level":68,
+        "text":"Never doubt that a small group of thoughtful, committed citizens can change the world;indeed, it's the only thing that ever has. ",
+        "time":91,
+        "character_key":"y,w,a,t,o,p,i,e,u,n,s,q,d,f,g,h,j,k,l,z,x,c,v,b,r,m",
+        "Author":"Margaret Mead"
     },
     {
-        "date": "2025-05-24",
-        "level": 81,
-        "text": "Price is what you pay. Value is what you get.",
-        "time": 66,
-        "character_key": "q,r,v,m,t,y,h,a,o,p,e,s,d,f,g,i,j,k,l,z,x,c,w,u,n,b",
-        "author": "Warren Buffett"
+        "level":69,
+        "text":"I did not have sexual relations with that woman.",
+        "time":42,
+        "character_key":"q,w,o,r,m,y,u,v,a,t,i,e,d,f,g,h,j,k,l,z,s,c,p,b,n,x",
+        "Author":"Bill Clinton"
     },
     {
-        "date": "2025-05-25",
-        "level": 82,
-        "text": "In taking revenge, a man is but even with his enemy; but in passing it over, he is superior.",
-        "time": 62,
-        "character_key": "z,w,a,r,i,y,u,e,o,p,q,t,d,f,g,h,j,k,l,n,x,c,v,b,s,m",
-        "author": "Francis Bacon"
+        "level":70,
+        "text":"One language sets you in a corridor for life. Two languages open every door along the way.",
+        "time":70,
+        "character_key":"q,w,o,r,l,y,a,i,b,t,e,g,d,f,u,h,j,k,s,z,x,c,v,p,n,m",
+        "Author":"Frank Smith"
     },
     {
-        "date": "2025-05-26",
-        "level": 83,
-        "text": "If you don't know where you are going, any road will get you there.",
-        "time": 51,
-        "character_key": "q,h,o,r,t,u,i,e,a,p,x,s,d,f,g,y,j,k,l,z,m,c,v,b,n,w",
-        "author": "Lewis Carroll"
+        "level":71,
+        "text":"Nothing is as important as passion. No matter what you want to do with your life, be passionate.",
+        "time":79,
+        "character_key":"q,w,o,x,a,y,u,i,r,n,e,t,d,f,g,h,j,k,l,z,p,c,v,b,m,s",
+        "Author":"Jon Bon Jovi"
     },
     {
-        "date": "2025-05-27",
-        "level": 84,
-        "text": "Don't cry because it's over. Smile because it happened.",
-        "time": 44,
-        "character_key": "q,w,x,r,d,y,u,i,o,p,e,s,b,f,g,h,j,c,l,z,k,t,v,a,n,m",
-        "author": "Dr. Seuss"
+        "level":72,
+        "text":"This is one small step for a man, one giant leap for mankind.",
+        "time":52,
+        "character_key":"q,p,e,r,w,y,u,t,a,d,i,o,l,f,g,h,j,k,m,z,x,c,v,b,n,s",
+        "Author":"Neil Armstrong"
     },
     {
-        "date": "2025-05-28",
-        "level": 85,
-        "text": "If you think education is expensive, try ignorance.",
-        "time": 44,
-        "character_key": "j,w,i,r,x,y,u,q,t,p,a,s,d,f,c,h,g,k,l,z,n,o,v,b,e,m",
-        "author": "Derek Bok"
+        "level":73,
+        "text":"My mom always tells me that imperfections equal beauty. All of us are imperfect.",
+        "time":73,
+        "character_key":"q,w,o,r,t,y,u,i,m,f,e,s,d,a,g,h,j,k,l,z,x,p,n,b,v,c",
+        "Author":"Miley Cyrus"
     },
     {
-        "date": "2025-05-29",
-        "level": 86,
-        "text": "I don't know which will go first, rock 'n' roll or Christianity.",
-        "time": 51,
-        "character_key": "q,o,e,r,i,y,u,s,p,h,a,w,d,f,g,t,j,k,l,z,x,c,v,b,n,m",
-        "author": "John Lennon"
+        "level":74,
+        "text":"I have not failed. I've just found 10,000 ways that won't work.",
+        "time":65,
+        "character_key":"q,f,v,r,j,y,t,u,e,p,h,s,d,i,g,o,w,k,l,z,x,c,a,b,n,m",
+        "Author":"Thomas A. Edison"
     },
     {
-        "date": "2025-05-30",
-        "level": 87,
-        "text": "The most wasted of all days is one without laughter.",
-        "time": 41,
-        "character_key": "q,a,h,r,w,y,u,i,z,p,o,s,d,f,g,t,j,e,l,k,x,c,v,b,n,m",
-        "author": "E. E. Cummings"
+        "level":75,
+        "text":"Life is like an onion. You peel it off one layer at a time, and sometimes you weep.",
+        "time":77,
+        "character_key":"q,n,l,r,o,p,u,i,y,f,a,s,d,e,g,h,j,k,v,z,x,c,w,b,t,m",
+        "Author":"Carl Sandburg"
     },
     {
-        "date": "2025-05-31",
-        "level": 88,
-        "text": "A pile of rocks ceases to be a rock when somebody contemplates it with the idea of a 88 cathedral in mind.",
-        "time": 73,
-        "character_key": "q,w,o,t,m,y,u,e,r,p,a,s,d,f,g,h,j,k,l,z,x,c,v,i,n,b",
-        "author": "Antoine de St-Exup\u00e9ry"
+        "level":76,
+        "text":"Vision is the art of seeing things invisible.",
+        "time":72,
+        "character_key":"q,w,a,r,e,y,u,g,o,p,i,v,d,f,n,t,j,k,l,z,x,c,h,b,s,m",
+        "Author":"Jonathan Swift"
     },
     {
-        "date": "2025-06-01",
-        "level": 89,
-        "text": "There were three of us in this marriage, so it was a bit crowded.",
-        "time": 47,
-        "character_key": "q,h,g,r,a,y,u,w,o,i,e,s,d,f,p,t,j,k,l,z,x,c,v,b,n,m",
-        "author": "Princess Diana"
+        "level":77,
+        "text":"If I want to knock a story off the front page, I just change my hairstyle.",
+        "time":53,
+        "character_key":"y,w,h,r,n,e,u,v,a,p,i,s,d,f,g,t,j,k,l,z,x,c,q,b,o,m",
+        "Author":"Hillary Clinton"
     },
     {
-        "date": "2025-06-02",
-        "level": 90,
-        "text": "If you steal from one author, it's plagiarism; if you steal from many, it's research.",
-        "time": 66,
-        "character_key": "q,w,r,a,i,s,u,m,y,p,o,t,d,f,g,e,j,k,l,z,x,c,v,b,n,h",
-        "author": "Wilson Mizner"
+        "level":78,
+        "text":"Wear a smile and have friends; wear a scowl and have wrinkles.",
+        "time":68,
+        "character_key":"p,q,a,e,t,y,u,i,o,l,w,r,d,f,g,h,j,k,s,z,x,c,v,b,n,m",
+        "Author":"George Eliot"
     },
     {
-        "date": "2025-06-03",
-        "level": 91,
-        "text": "There are only two styles of portrait painting: the serious and the smirk.",
-        "time": 54,
-        "character_key": "q,w,s,p,m,r,u,i,o,a,e,t,d,f,y,h,j,k,l,g,x,c,v,b,n,z",
-        "author": "Charles Dickens"
+        "level":79,
+        "text":"My smile is my favorite part of my body. I think a smile can make your whole body.",
+        "time":44,
+        "character_key":"t,w,s,r,b,g,u,i,a,p,e,y,d,o,q,h,j,k,l,z,x,c,v,f,n,m",
+        "Author":"Serena Williams"
     },
     {
-        "date": "2025-06-04",
-        "level": 92,
-        "text": "Being second is to be the first of the ones who lose.",
-        "time": 39,
-        "character_key": "p,w,q,r,i,y,u,o,e,h,a,f,d,t,g,v,j,k,l,z,x,c,b,s,n,m",
-        "author": "Ayrton Senna"
+        "level":80,
+        "text":"I would like to die on Mars. Just not on impact.",
+        "time":42,
+        "character_key":"q,o,e,r,m,y,u,k,i,p,t,s,d,f,a,h,j,b,w,z,x,c,v,g,n,l",
+        "Author":"Elon Musk"
     },
     {
-        "date": "2025-06-05",
-        "level": 93,
-        "text": "No man will make a great leader who wants to do it all himself, or to get all the credit for doing it.",
-        "time": 71,
-        "character_key": "q,p,a,r,l,y,u,i,t,z,m,s,d,f,g,h,j,k,n,o,x,c,v,b,e,w",
-        "author": "Andrew Carnegie"
+        "level":81,
+        "text":"Price is what you pay. Value is what you get.",
+        "time":76,
+        "character_key":"q,r,v,m,t,y,h,a,o,p,e,s,d,f,g,i,j,k,l,z,x,c,w,u,n,b",
+        "Author":"Warren Buffett"
     },
     {
-        "date": "2025-06-06",
-        "level": 94,
-        "text": "I've always said I don't believe in God. I believe in Al Pacino.",
-        "time": 43,
-        "character_key": "q,w,a,r,t,y,u,j,o,p,i,s,d,f,g,h,z,k,e,v,x,c,b,l,n,m",
-        "author": "Javier Bardem"
+        "level":82,
+        "text":"In taking revenge, a man is but even with his enemy; but in passing it over, he is superior.",
+        "time":72,
+        "character_key":"z,w,a,r,i,y,u,e,o,p,q,t,d,f,g,h,j,k,l,n,x,c,v,b,s,m",
+        "Author":"Francis Bacon"
     },
     {
-        "date": "2025-06-07",
-        "level": 95,
-        "text": "I believe you have to be willing to be misunderstood if you're going to innovate.",
-        "time": 63,
-        "character_key": "q,w,k,r,n,y,g,o,e,u,a,s,d,f,l,h,j,p,t,z,x,c,v,b,i,m",
-        "author": "Jeff Bezos"
+        "level":83,
+        "text":"If you don't know where you are going, any road will get you there.",
+        "time":61,
+        "character_key":"q,h,o,r,t,u,i,e,a,p,x,s,d,f,g,y,j,k,l,z,m,c,v,b,n,w",
+        "Author":"Lewis Carroll"
     },
     {
-        "date": "2025-06-08",
-        "level": 96,
-        "text": "Time is the best teacher, but unfortunately, it kills all of its students.",
-        "time": 60,
-        "character_key": "q,w,i,r,b,y,u,k,o,g,a,h,d,f,s,n,j,t,l,z,x,c,v,p,e,m",
-        "author": "Robin Williams"
+        "level":84,
+        "text":"Don't cry because it's over. Smile because it happened.",
+        "time":54,
+        "character_key":"q,w,x,r,d,y,u,i,o,p,e,s,b,f,g,h,j,c,l,z,k,t,v,a,n,m",
+        "Author":"Dr. Seuss"
     },
     {
-        "date": "2025-06-09",
-        "level": 97,
-        "text": "Every time I open a bottle of wine, it is an amazing trip somewhere.",
-        "time": 49,
-        "character_key": "q,t,c,r,o,y,u,w,e,p,a,s,d,f,g,h,j,n,l,z,x,k,v,b,i,m",
-        "author": "Jose\u0301 Andre\u0301s"
+        "level":85,
+        "text":"If you think education is expensive, try ignorance.",
+        "time":54,
+        "character_key":"j,w,i,r,x,y,u,q,t,p,a,s,d,f,c,h,g,k,l,z,n,o,v,b,e,m",
+        "Author":"Derek Bok"
     },
     {
-        "date": "2025-06-10",
-        "level": 98,
-        "text": "Don't do anything as an individual that will make you stand out from your teammates.",
-        "time": 57,
-        "character_key": "q,w,a,r,n,y,u,i,e,t,c,s,d,o,g,h,j,k,l,z,x,p,v,b,m,f",
-        "author": "Coach K."
+        "level":86,
+        "text":"I don't know which will go first, rock 'n' roll or Christianity.",
+        "time":61,
+        "character_key":"q,o,e,r,i,y,u,s,p,h,a,w,d,f,g,t,j,k,l,z,x,c,v,b,n,m",
+        "Author":"John Lennon"
     },
     {
-        "date": "2025-06-11",
-        "level": 99,
-        "text": "I am not afraid of an army of lions led by a sheep; I am afraid of an army of sheep led by a lion.",
-        "time": 74,
-        "character_key": "q,w,a,i,t,o,u,s,n,p,h,e,f,r,g,m,j,k,l,z,x,c,v,b,d,y",
-        "author": "Alexander the Great"
+        "level":87,
+        "text":"The most wasted of all days is one without laughter.",
+        "time":51,
+        "character_key":"q,a,h,r,w,y,u,i,z,p,o,s,d,f,g,t,j,e,l,k,x,c,v,b,n,m",
+        "Author":"E. E. Cummings"
     },
     {
-        "date": "2025-06-12",
-        "level": 100,
-        "text": "I would rather lose all my lands and a hundred lives than be king over heretics.",
-        "time": 68,
-        "character_key": "q,w,d,r,t,y,u,m,h,p,a,n,l,f,g,e,j,k,i,z,x,c,s,b,o,v",
-        "author": "Philip II of Spain"
+        "level":88,
+        "text":"A pile of rocks ceases to be a rock when somebody contemplates it with the idea of a 88 cathedral in mind.",
+        "time":83,
+        "character_key":"q,w,o,t,m,y,u,e,r,p,a,s,d,f,g,h,j,k,l,z,x,c,v,i,n,b",
+        "Author":"Antoine de St-Exup\u00e9ry"
     },
     {
-        "date": "2025-06-13",
-        "level": 101,
-        "text": "The limits of my language are the limits of my world.",
-        "time": 30,
-        "character_key": "q,w,p,r,t,y,u,i,e,k,a,g,d,f,m,l,j,v,s,z,x,c,h,b,n,o",
-        "author": "Ludwig Wittgenstein"
+        "level":89,
+        "text":"There were three of us in this marriage, so it was a bit crowded.",
+        "time":57,
+        "character_key":"q,h,g,r,a,y,u,w,o,i,e,s,d,f,p,t,j,k,l,z,x,c,v,b,n,m",
+        "Author":"Princess Diana"
     },
     {
-        "date": "2025-06-14",
-        "level": 102,
-        "text": "Give me a lever long enough and a fulcrum and I shall move the world.",
-        "time": 50,
-        "character_key": "q,w,t,r,c,y,i,l,e,p,a,s,d,f,g,h,j,k,u,z,x,b,n,m,o,v",
-        "author": "Archimedes"
+        "level":90,
+        "text":"If you steal from one author, it's plagiarism; if you steal from many, it's research.",
+        "time":76,
+        "character_key":"q,w,r,a,i,s,u,m,y,p,o,t,d,f,g,e,j,k,l,z,x,c,v,b,n,h",
+        "Author":"Wilson Mizner"
     },
     {
-        "date": "2025-06-15",
-        "level": 103,
-        "text": "An archaeologist is the best husband a woman can have; the older she gets the more interested he is in her.",
-        "time": 74,
-        "character_key": "q,s,a,l,m,y,u,i,e,p,h,r,t,f,g,w,j,k,d,z,x,c,v,b,n,o",
-        "author": "Agatha Christie"
+        "level":91,
+        "text":"There are only two styles of portrait painting: the serious and the smirk.",
+        "time":64,
+        "character_key":"q,w,s,p,m,r,u,i,o,a,e,t,d,f,y,h,j,k,l,g,x,c,v,b,n,z",
+        "Author":"Charles Dickens"
     },
     {
-        "date": "2025-06-16",
-        "level": 104,
-        "text": "Taxes are not good things, but if you want services, somebody's got to pay for them.",
-        "time": 60,
-        "character_key": "b,w,a,r,z,o,v,i,x,p,t,e,d,f,g,h,j,k,l,q,s,c,y,u,n,m",
-        "author": "Michael Bloomberg"
+        "level":92,
+        "text":"Being second is to be the first of the ones who lose.",
+        "time":49,
+        "character_key":"p,w,q,r,i,y,u,o,e,h,a,f,d,t,g,v,j,k,l,z,x,c,b,s,n,m",
+        "Author":"Ayrton Senna"
     },
     {
-        "date": "2025-06-17",
-        "level": 105,
-        "text": "If you want something said, ask a man; if you want something done, ask a woman.",
-        "time": 48,
-        "character_key": "q,j,a,r,t,y,u,n,m,i,o,s,d,f,h,k,p,e,l,z,x,c,v,b,g,w",
-        "author": "Margaret Thatcher"
+        "level":93,
+        "text":"No man will make a great leader who wants to do it all himself, or to get all the credit for doing it.",
+        "time":81,
+        "character_key":"q,p,a,r,l,y,u,i,t,z,m,s,d,f,g,h,j,k,n,o,x,c,v,b,e,w",
+        "Author":"Andrew Carnegie"
     },
     {
-        "date": "2025-06-18",
-        "level": 106,
-        "text": "Language is the road map of a culture. It tells you where its people come from and where they are going.",
-        "time": 69,
-        "character_key": "q,t,a,w,h,g,u,o,e,r,m,s,d,f,p,i,j,k,l,z,x,c,v,b,n,y",
-        "author": "Rita Mae Brown"
+        "level":94,
+        "text":"I've always said I don't believe in God. I believe in Al Pacino.",
+        "time":53,
+        "character_key":"q,w,a,r,t,y,u,j,o,p,i,s,d,f,g,h,z,k,e,v,x,c,b,l,n,m",
+        "Author":"Javier Bardem"
     },
     {
-        "date": "2025-06-19",
-        "level": 107,
-        "text": "I got a hundred bucks says my baby beats Pete's baby. I just think genetics are in my favour.",
-        "time": 73,
-        "character_key": "q,w,c,s,y,b,u,n,i,p,a,t,d,f,e,h,j,k,l,z,x,o,v,r,g,m",
-        "author": "Andre Agassi"
+        "level":95,
+        "text":"I believe you have to be willing to be misunderstood if you're going to innovate.",
+        "time":73,
+        "character_key":"q,w,k,r,n,y,g,o,e,u,a,s,d,f,l,h,j,p,t,z,x,c,v,b,i,m",
+        "Author":"Jeff Bezos"
     },
     {
-        "date": "2025-06-20",
-        "level": 108,
-        "text": "When love and skill work together, expect a masterpiece.",
-        "time": 44,
-        "character_key": "q,y,h,r,i,p,u,s,l,k,a,o,d,f,g,w,j,x,e,z,t,c,v,b,n,m",
-        "author": "John Ruskin"
+        "level":96,
+        "text":"Time is the best teacher, but unfortunately, it kills all of its students.",
+        "time":70,
+        "character_key":"q,w,i,r,b,y,u,k,o,g,a,h,d,f,s,n,j,t,l,z,x,c,v,p,e,m",
+        "Author":"Robin Williams"
     },
     {
-        "date": "2025-06-21",
-        "level": 109,
-        "text": "What the world needs is more geniuses with humility, there are so few of us left.",
-        "time": 49,
-        "character_key": "k,z,t,r,w,y,u,i,a,p,e,s,d,m,n,h,j,g,l,q,x,c,v,b,f,o",
-        "author": "Oscar Levant"
+        "level":97,
+        "text":"Every time I open a bottle of wine, it is an amazing trip somewhere.",
+        "time":59,
+        "character_key":"q,t,c,r,o,y,u,w,e,p,a,s,d,f,g,h,j,n,l,z,x,k,v,b,i,m",
+        "Author":"Jose\u0301 Andre\u0301s"
     },
     {
-        "date": "2025-06-22",
-        "level": 110,
-        "text": "Happiness often sneaks in through a door you didn't know you left open.",
-        "time": 61,
-        "character_key": "q,w,e,r,i,y,n,s,o,a,t,p,u,f,c,g,j,h,l,z,x,m,v,b,k,d",
-        "author": "John Barrymore"
+        "level":98,
+        "text":"Don't do anything as an individual that will make you stand out from your teammates.",
+        "time":67,
+        "character_key":"q,w,a,r,n,y,u,i,e,t,c,s,d,o,g,h,j,k,l,z,x,p,v,b,m,f",
+        "Author":"Coach K."
     },
     {
-        "date": "2025-06-23",
-        "level": 111,
-        "text": "I like to listen. I have learned a great deal from listening carefully. Most people never listen.",
-        "time": 63,
-        "character_key": "q,w,i,r,e,y,u,k,n,l,p,t,d,f,o,h,j,g,s,z,x,c,v,b,m,a",
-        "author": "Ernest Hemingway"
+        "level":99,
+        "text":"I am not afraid of an army of lions led by a sheep; I am afraid of an army of sheep led by a lion.",
+        "time":84,
+        "character_key":"q,w,a,i,t,o,u,s,n,p,h,e,f,r,g,m,j,k,l,z,x,c,v,b,d,y",
+        "Author":"Alexander the Great"
     },
     {
-        "date": "2025-06-24",
-        "level": 112,
-        "text": "Sometimes you want to give up the guitar, but if you stick with it, you are gonna be rewarded.",
-        "time": 72,
-        "character_key": "q,u,o,r,e,y,g,w,m,p,n,j,a,f,d,h,z,k,l,i,x,c,v,b,t,s",
-        "author": "Jimi Hendrix"
+        "level":100,
+        "text":"I would rather lose all my lands and a hundred lives than be king over heretics.",
+        "time":78,
+        "character_key":"q,w,d,r,t,y,u,m,h,p,a,n,l,f,g,e,j,k,i,z,x,c,s,b,o,v",
+        "Author":"Philip II of Spain"
     },
     {
-        "date": "2025-06-25",
-        "level": 113,
-        "text": "Talent hits a target no one else can hit; Genius hits a target no one else can see.",
-        "time": 61,
-        "character_key": "q,w,a,c,v,y,u,g,r,h,t,i,d,f,n,o,j,k,l,p,x,s,z,b,e,m",
-        "author": "Arthur Schopenhauer"
+        "level":101,
+        "text":"The limits of my language are the limits of my world.",
+        "time":40,
+        "character_key":"q,w,p,r,t,y,u,i,e,k,a,g,d,f,m,l,j,v,s,z,x,c,h,b,n,o",
+        "Author":"Ludwig Wittgenstein"
     },
     {
-        "date": "2025-06-26",
-        "level": 114,
-        "text": "Thinking is the worst thing in improvisation. You need only feeling. Forget everything. Try to fly.",
-        "time": 64,
-        "character_key": "q,w,s,t,u,r,g,y,a,n,i,o,d,f,p,h,j,k,l,z,x,c,v,b,e,m",
-        "author": "Paco de Luci\u0301a"
+        "level":102,
+        "text":"Give me a lever long enough and a fulcrum and I shall move the world.",
+        "time":60,
+        "character_key":"q,w,t,r,c,y,i,l,e,p,a,s,d,f,g,h,j,k,u,z,x,b,n,m,o,v",
+        "Author":"Archimedes"
     },
     {
-        "date": "2025-06-27",
-        "level": 115,
-        "text": "Start by doing what's necessary; then do what's possible; and suddenly you are doing the impossible.",
-        "time": 74,
-        "character_key": "q,c,o,r,a,s,u,y,w,p,e,t,i,f,g,h,j,k,d,z,x,n,v,b,l,m",
-        "author": "Francis of Assisi"
+        "level":103,
+        "text":"An archaeologist is the best husband a woman can have; the older she gets the more interested he is in her.",
+        "time":84,
+        "character_key":"q,s,a,l,m,y,u,i,e,p,h,r,t,f,g,w,j,k,d,z,x,c,v,b,n,o",
+        "Author":"Agatha Christie"
     },
     {
-        "date": "2025-06-28",
-        "level": 116,
-        "text": "I'm never pleased with anything, I'm a perfectionist, it's part of who I am.",
-        "time": 66,
-        "character_key": "q,h,n,o,y,s,u,v,c,a,e,w,d,f,g,r,j,k,l,z,x,p,t,b,i,m",
-        "author": "Michael Jackson"
+        "level":104,
+        "text":"Taxes are not good things, but if you want services, somebody's got to pay for them.",
+        "time":70,
+        "character_key":"b,w,a,r,z,o,v,i,x,p,t,e,d,f,g,h,j,k,l,q,s,c,y,u,n,m",
+        "Author":"Michael Bloomberg"
     },
     {
-        "date": "2025-06-29",
-        "level": 117,
-        "text": "Life is not measured by the number of breaths we take, but by the moments that take our breath away.",
-        "time": 76,
-        "character_key": "q,b,a,w,r,n,u,i,o,p,d,m,y,f,g,t,j,k,l,z,x,c,h,e,s,v",
-        "author": "Maya Angelou"
+        "level":105,
+        "text":"If you want something said, ask a man; if you want something done, ask a woman.",
+        "time":58,
+        "character_key":"q,j,a,r,t,y,u,n,m,i,o,s,d,f,h,k,p,e,l,z,x,c,v,b,g,w",
+        "Author":"Margaret Thatcher"
     },
     {
-        "date": "2025-06-30",
-        "level": 118,
-        "text": "Hollywood is the place where they'll pay you a thousand dollars for a kiss and fifty cents for your soul.",
-        "time": 66,
-        "character_key": "q,e,r,d,t,a,o,i,l,p,s,h,y,f,g,u,j,k,n,z,x,c,v,b,w,m",
-        "author": "Marilyn Monroe"
+        "level":106,
+        "text":"Language is the road map of a culture. It tells you where its people come from and where they are going.",
+        "time":79,
+        "character_key":"q,t,a,w,h,g,u,o,e,r,m,s,d,f,p,i,j,k,l,z,x,c,v,b,n,y",
+        "Author":"Rita Mae Brown"
     },
     {
-        "date": "2025-07-01",
-        "level": 119,
-        "text": "If you think nobody cares if you're alive, try missing a couple of car payments.",
-        "time": 64,
-        "character_key": "q,w,s,e,m,i,u,n,c,l,g,t,d,f,p,h,j,k,o,z,x,r,v,b,a,y",
-        "author": "Flip Wilson"
+        "level":107,
+        "text":"I got a hundred bucks says my baby beats Pete's baby. I just think genetics are in my favour.",
+        "time":83,
+        "character_key":"q,w,c,s,y,b,u,n,i,p,a,t,d,f,e,h,j,k,l,z,x,o,v,r,g,m",
+        "Author":"Andre Agassi"
     },
     {
-        "date": "2025-07-02",
-        "level": 120,
-        "text": "If you wish to make an apple pie from scratch, you must first invent the universe.",
-        "time": 52,
-        "character_key": "q,w,s,e,t,y,p,b,r,i,a,u,d,f,m,h,j,k,l,z,x,c,n,g,o,v",
-        "author": "Carl Sagan"
+        "level":108,
+        "text":"When love and skill work together, expect a masterpiece.",
+        "time":54,
+        "character_key":"q,y,h,r,i,p,u,s,l,k,a,o,d,f,g,w,j,x,e,z,t,c,v,b,n,m",
+        "Author":"John Ruskin"
     },
     {
-        "date": "2025-07-03",
-        "level": 121,
-        "text": "A lot of people are afraid to say what they want. That's why they don't get what they want.",
-        "time": 64,
-        "character_key": "q,h,w,t,n,o,u,i,l,r,z,s,d,y,f,a,j,k,p,g,x,c,v,b,e,m",
-        "author": "Madonna"
+        "level":109,
+        "text":"What the world needs is more geniuses with humility, there are so few of us left.",
+        "time":59,
+        "character_key":"k,z,t,r,w,y,u,i,a,p,e,s,d,m,n,h,j,g,l,q,x,c,v,b,f,o",
+        "Author":"Oscar Levant"
     },
     {
-        "date": "2025-07-04",
-        "level": 122,
-        "text": "People seldom do what they believe in. They do what is convenient, then repent.",
-        "time": 62,
-        "character_key": "q,l,a,c,r,o,u,i,p,e,h,s,y,f,g,w,j,k,n,z,x,v,d,b,t,m",
-        "author": "Bob Dylan"
+        "level":110,
+        "text":"Happiness often sneaks in through a door you didn't know you left open.",
+        "time":71,
+        "character_key":"q,w,e,r,i,y,n,s,o,a,t,p,u,f,c,g,j,h,l,z,x,m,v,b,k,d",
+        "Author":"John Barrymore"
     },
     {
-        "date": "2025-07-05",
-        "level": 123,
-        "text": "The thing that I'm just scared to death of is that someday I'm going to wake up and bore somebody with a film.",
-        "time": 64,
-        "character_key": "q,w,a,r,t,b,o,e,i,p,g,s,y,d,h,m,j,k,l,z,x,c,v,u,n,f",
-        "author": "Steven Spielberg"
+        "level":111,
+        "text":"I like to listen. I have learned a great deal from listening carefully. Most people never listen.",
+        "time":73,
+        "character_key":"q,w,i,r,e,y,u,k,n,l,p,t,d,f,o,h,j,g,s,z,x,c,v,b,m,a",
+        "Author":"Ernest Hemingway"
     },
     {
-        "date": "2025-07-06",
-        "level": 124,
-        "text": "The life of the dead is placed in the memory of the living.",
-        "time": 44,
-        "character_key": "q,w,h,y,o,m,u,l,p,r,a,s,d,i,n,t,j,k,e,z,x,c,f,b,v,g",
-        "author": "Cicero"
+        "level":112,
+        "text":"Sometimes you want to give up the guitar, but if you stick with it, you are gonna be rewarded.",
+        "time":82,
+        "character_key":"q,u,o,r,e,y,g,w,m,p,n,j,a,f,d,h,z,k,l,i,x,c,v,b,t,s",
+        "Author":"Jimi Hendrix"
     },
     {
-        "date": "2025-07-07",
-        "level": 125,
-        "text": "Selling out is doing something you don't really want to do for money. That's what selling out is.",
-        "time": 66,
-        "character_key": "q,w,l,n,u,m,o,e,i,p,a,f,d,r,g,h,j,k,s,z,x,c,v,b,y,t",
-        "author": "Bono"
+        "level":113,
+        "text":"Talent hits a target no one else can hit; Genius hits a target no one else can see.",
+        "time":71,
+        "character_key":"q,w,a,c,v,y,u,g,r,h,t,i,d,f,n,o,j,k,l,p,x,s,z,b,e,m",
+        "Author":"Arthur Schopenhauer"
     },
     {
-        "date": "2025-07-08",
-        "level": 126,
-        "text": "The nice thing about being a celebrity is that if you bore people they think it's their fault.",
-        "time": 62,
-        "character_key": "q,w,a,y,k,i,u,e,g,o,f,s,d,t,n,r,j,l,p,z,x,c,v,b,h,m",
-        "author": "Henry Kissinger"
+        "level":114,
+        "text":"Thinking is the worst thing in improvisation. You need only feeling. Forget everything. Try to fly.",
+        "time":74,
+        "character_key":"q,w,s,t,u,r,g,y,a,n,i,o,d,f,p,h,j,k,l,z,x,c,v,b,e,m",
+        "Author":"Paco de Luci\u0301a"
     },
     {
-        "date": "2025-07-09",
-        "level": 127,
-        "text": "Complexity is your enemy. Any fool can make something complicated. It is hard to make something simple.",
-        "time": 74,
-        "character_key": "q,w,o,a,t,i,u,l,c,m,x,s,r,f,g,h,j,d,p,z,y,k,v,b,n,e",
-        "author": "Richard Branson"
-    },
-    {
-        "date": "2025-07-10",
-        "level": 128,
-        "text": "The nine most terrifying words in the English language are: I'm from the government and I'm here to help.",
-        "time": 73,
-        "character_key": "q,w,n,m,t,y,u,a,h,l,r,s,d,f,i,p,j,k,e,z,x,c,o,b,g,v",
-        "author": "Ronald Reagan"
-    },
-    {
-        "date": "2025-07-11",
-        "level": 129,
-        "text": "If investing is entertaining, you're probably not making any money. Good investing is boring.",
-        "time": 74,
-        "character_key": "q,w,i,b,t,y,u,m,v,p,a,s,d,f,n,h,j,o,l,z,x,c,g,e,r,k",
-        "author": "George Soros"
-    },
-    {
-        "date": "2025-07-12",
-        "level": 130,
-        "text": "Work for someone who believes in you, because when they believe in you they'll invest in you.",
-        "time": 74,
-        "character_key": "q,p,l,r,b,e,t,i,h,s,a,u,d,f,g,w,j,k,o,z,x,c,y,v,n,m",
-        "author": "Marissa Mayer"
-    },
-    {
-        "date": "2025-07-13",
-        "level": 131,
-        "text": "The progress that we mark today is yet another demonstration that we don't have to be imprisoned by the past.",
-        "time": 79,
-        "character_key": "q,w,a,m,s,y,u,i,e,r,p,n,t,f,g,h,j,k,l,z,x,c,v,b,o,d",
-        "author": "Barack Obama"
-    },
-    {
-        "date": "2025-07-14",
-        "level": 132,
-        "text": "Move fast and break things. Unless you are breaking stuff, you are not moving fast enough.",
-        "time": 66,
-        "character_key": "p,w,v,q,s,y,h,u,m,n,f,a,d,e,r,g,j,t,l,z,x,c,o,b,k,i",
-        "author": "Mark Zuckerberg"
-    },
-    {
-        "date": "2025-07-15",
-        "level": 133,
-        "text": "Try never to be the smartest person in the room. And if you are, invite smarter people or find a different room.",
-        "time": 84,
-        "character_key": "q,w,p,o,f,y,u,i,a,s,e,n,d,m,g,h,j,k,l,z,x,c,v,b,t,r",
-        "author": "Michael Dell"
-    },
-    {
-        "date": "2025-07-16",
-        "level": 134,
-        "text": "Language is the blood of the soul into which thoughts run and out of which they grow.",
-        "time": 74,
-        "character_key": "q,g,o,l,s,u,h,i,r,p,a,c,d,f,e,w,j,k,t,z,x,y,v,b,n,m",
-        "author": "Oliver Wendell Holmes"
-    },
-    {
-        "date": "2025-07-17",
-        "level": 135,
-        "text": "My parents wanted me to be a lawyer. But I don't think I would have been very happy. I'd be in front of the jury singing.",
-        "time": 84,
-        "character_key": "q,i,a,e,t,m,u,g,o,s,n,r,d,f,b,h,j,k,l,z,x,c,v,p,y,w",
-        "author": "J. Lo"
-    },
-    {
-        "date": "2025-07-18",
-        "level": 136,
-        "text": "Great spirits have always encountered violent opposition from mediocre minds.",
-        "time": 59,
-        "character_key": "v,w,r,g,o,y,u,i,d,s,e,t,m,f,q,h,j,k,l,z,x,a,c,b,n,p",
-        "author": "George Orwell"
-    },
-    {
-        "date": "2025-07-19",
-        "level": 137,
-        "text": "If a person is gay and seeks the Lord and is of good will, who am I to judge him?",
-        "time": 66,
-        "character_key": "q,w,a,r,t,y,j,g,o,p,i,f,u,e,d,k,m,s,l,z,x,c,v,b,n,h",
-        "author": "Pope Francis"
-    },
-    {
-        "date": "2025-07-20",
-        "level": 138,
-        "text": "If you talk to a man in a language he understands, that goes to his head. If you talk to him in his own language, that goes to his heart.",
-        "time": 102,
-        "character_key": "q,w,a,h,s,y,o,n,i,p,u,g,r,f,e,t,j,k,l,z,x,c,v,b,d,m",
-        "author": "Nelson Mandela"
-    },
-    {
-        "date": "2025-07-21",
-        "level": 139,
-        "text": "My favorite things in life don't cost any money. It's really clear that the most precious resource we all have is time.",
-        "time": 101,
-        "character_key": "q,w,o,p,y,m,u,h,s,v,r,g,d,f,n,t,j,k,c,z,x,a,e,b,i,l",
-        "author": "Steve Jobs"
+        "level":115,
+        "text":"Start by doing what's necessary; then do what's possible; and suddenly you are doing the impossible.",
+        "time":84,
+        "character_key":"q,c,o,r,a,s,u,y,w,p,e,t,i,f,g,h,j,k,d,z,x,n,v,b,l,m",
+        "Author":"Francis of Assisi"
+    },
+    {
+        "level":116,
+        "text":"I'm never pleased with anything, I'm a perfectionist, it's part of who I am.",
+        "time":76,
+        "character_key":"q,h,n,o,y,s,u,v,c,a,e,w,d,f,g,r,j,k,l,z,x,p,t,b,i,m",
+        "Author":"Michael Jackson"
+    },
+    {
+        "level":117,
+        "text":"Life is not measured by the number of breaths we take, but by the moments that take our breath away.",
+        "time":86,
+        "character_key":"q,b,a,w,r,n,u,i,o,p,d,m,y,f,g,t,j,k,l,z,x,c,h,e,s,v",
+        "Author":"Maya Angelou"
+    },
+    {
+        "level":118,
+        "text":"Hollywood is the place where they'll pay you a thousand dollars for a kiss and fifty cents for your soul.",
+        "time":76,
+        "character_key":"q,e,r,d,t,a,o,i,l,p,s,h,y,f,g,u,j,k,n,z,x,c,v,b,w,m",
+        "Author":"Marilyn Monroe"
+    },
+    {
+        "level":119,
+        "text":"If you think nobody cares if you're alive, try missing a couple of car payments.",
+        "time":74,
+        "character_key":"q,w,s,e,m,i,u,n,c,l,g,t,d,f,p,h,j,k,o,z,x,r,v,b,a,y",
+        "Author":"Flip Wilson"
+    },
+    {
+        "level":120,
+        "text":"If you wish to make an apple pie from scratch, you must first invent the universe.",
+        "time":62,
+        "character_key":"q,w,s,e,t,y,p,b,r,i,a,u,d,f,m,h,j,k,l,z,x,c,n,g,o,v",
+        "Author":"Carl Sagan"
+    },
+    {
+        "level":121,
+        "text":"A lot of people are afraid to say what they want. That's why they don't get what they want.",
+        "time":74,
+        "character_key":"q,h,w,t,n,o,u,i,l,r,z,s,d,y,f,a,j,k,p,g,x,c,v,b,e,m",
+        "Author":"Madonna"
+    },
+    {
+        "level":122,
+        "text":"People seldom do what they believe in. They do what is convenient, then repent.",
+        "time":72,
+        "character_key":"q,l,a,c,r,o,u,i,p,e,h,s,y,f,g,w,j,k,n,z,x,v,d,b,t,m",
+        "Author":"Bob Dylan"
+    },
+    {
+        "level":123,
+        "text":"The thing that I'm just scared to death of is that someday I'm going to wake up and bore somebody with a film.",
+        "time":74,
+        "character_key":"q,w,a,r,t,b,o,e,i,p,g,s,y,d,h,m,j,k,l,z,x,c,v,u,n,f",
+        "Author":"Steven Spielberg"
+    },
+    {
+        "level":124,
+        "text":"The life of the dead is placed in the memory of the living.",
+        "time":54,
+        "character_key":"q,w,h,y,o,m,u,l,p,r,a,s,d,i,n,t,j,k,e,z,x,c,f,b,v,g",
+        "Author":"Cicero"
+    },
+    {
+        "level":125,
+        "text":"Selling out is doing something you don't really want to do for money. That's what selling out is.",
+        "time":76,
+        "character_key":"q,w,l,n,u,m,o,e,i,p,a,f,d,r,g,h,j,k,s,z,x,c,v,b,y,t",
+        "Author":"Bono"
+    },
+    {
+        "level":126,
+        "text":"The nice thing about being a celebrity is that if you bore people they think it's their fault.",
+        "time":72,
+        "character_key":"q,w,a,y,k,i,u,e,g,o,f,s,d,t,n,r,j,l,p,z,x,c,v,b,h,m",
+        "Author":"Henry Kissinger"
+    },
+    {
+        "level":127,
+        "text":"Complexity is your enemy. Any fool can make something complicated. It is hard to make something simple.",
+        "time":84,
+        "character_key":"q,w,o,a,t,i,u,l,c,m,x,s,r,f,g,h,j,d,p,z,y,k,v,b,n,e",
+        "Author":"Richard Branson"
+    },
+    {
+        "level":128,
+        "text":"The nine most terrifying words in the English language are: I'm from the government and I'm here to help.",
+        "time":83,
+        "character_key":"q,w,n,m,t,y,u,a,h,l,r,s,d,f,i,p,j,k,e,z,x,c,o,b,g,v",
+        "Author":"Ronald Reagan"
+    },
+    {
+        "level":129,
+        "text":"If investing is entertaining, you're probably not making any money. Good investing is boring.",
+        "time":84,
+        "character_key":"q,w,i,b,t,y,u,m,v,p,a,s,d,f,n,h,j,o,l,z,x,c,g,e,r,k",
+        "Author":"George Soros"
+    },
+    {
+        "level":130,
+        "text":"Work for someone who believes in you, because when they believe in you they'll invest in you.",
+        "time":84,
+        "character_key":"q,p,l,r,b,e,t,i,h,s,a,u,d,f,g,w,j,k,o,z,x,c,y,v,n,m",
+        "Author":"Marissa Mayer"
+    },
+    {
+        "level":131,
+        "text":"The progress that we mark today is yet another demonstration that we don't have to be imprisoned by the past.",
+        "time":89,
+        "character_key":"q,w,a,m,s,y,u,i,e,r,p,n,t,f,g,h,j,k,l,z,x,c,v,b,o,d",
+        "Author":"Barack Obama"
+    },
+    {
+        "level":132,
+        "text":"Move fast and break things. Unless you are breaking stuff, you are not moving fast enough.",
+        "time":76,
+        "character_key":"p,w,v,q,s,y,h,u,m,n,f,a,d,e,r,g,j,t,l,z,x,c,o,b,k,i",
+        "Author":"Mark Zuckerberg"
+    },
+    {
+        "level":133,
+        "text":"Try never to be the smartest person in the room. And if you are, invite smarter people or find a different room.",
+        "time":94,
+        "character_key":"q,w,p,o,f,y,u,i,a,s,e,n,d,m,g,h,j,k,l,z,x,c,v,b,t,r",
+        "Author":"Michael Dell"
+    },
+    {
+        "level":134,
+        "text":"Language is the blood of the soul into which thoughts run and out of which they grow.",
+        "time":84,
+        "character_key":"q,g,o,l,s,u,h,i,r,p,a,c,d,f,e,w,j,k,t,z,x,y,v,b,n,m",
+        "Author":"Oliver Wendell Holmes"
+    },
+    {
+        "level":135,
+        "text":"My parents wanted me to be a lawyer. But I don't think I would have been very happy. I'd be in front of the jury singing.",
+        "time":94,
+        "character_key":"q,i,a,e,t,m,u,g,o,s,n,r,d,f,b,h,j,k,l,z,x,c,v,p,y,w",
+        "Author":"J. Lo"
+    },
+    {
+        "level":136,
+        "text":"Great spirits have always encountered violent opposition from mediocre minds.",
+        "time":69,
+        "character_key":"v,w,r,g,o,y,u,i,d,s,e,t,m,f,q,h,j,k,l,z,x,a,c,b,n,p",
+        "Author":"George Orwell"
+    },
+    {
+        "level":137,
+        "text":"If a person is gay and seeks the Lord and is of good will, who am I to judge him?",
+        "time":76,
+        "character_key":"q,w,a,r,t,y,j,g,o,p,i,f,u,e,d,k,m,s,l,z,x,c,v,b,n,h",
+        "Author":"Pope Francis"
+    },
+    {
+        "level":138,
+        "text":"If you talk to a man in a language he understands, that goes to his head. If you talk to him in his own language, that goes to his heart.",
+        "time":112,
+        "character_key":"q,w,a,h,s,y,o,n,i,p,u,g,r,f,e,t,j,k,l,z,x,c,v,b,d,m",
+        "Author":"Nelson Mandela"
+    },
+    {
+        "level":139,
+        "text":"My favorite things in life don't cost any money. It's really clear that the most precious resource we all have is time.",
+        "time":111,
+        "character_key":"q,w,o,p,y,m,u,h,s,v,r,g,d,f,n,t,j,k,c,z,x,a,e,b,i,l",
+        "Author":"Steve Jobs"
     }
 ]
