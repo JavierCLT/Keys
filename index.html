@@ -19,6 +19,7 @@
         #sentence {
             font-size: 20px;
             margin: 20px 0;
+            display: none; /* Hidden until Start */
         }
         #input {
             width: 90%;
@@ -29,30 +30,60 @@
         #timer {
             font-size: 20px;
             color: #e74c3c;
+            display: none; /* Hidden until Start */
+        }
+        #start-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 20px 0;
+        }
+        #start-button:hover {
+            background: #2980b9;
         }
         #keyboard {
-            margin: 20px 0;
+            margin: 20px auto;
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            max-width: 95vw; /* Increased width to fit all keys */
+            display: none; /* Hidden until Start */
+        }
+        .row {
+            display: flex;
             justify-content: center;
             gap: 3px;
         }
         .key {
-            padding: 10px 15px;
+            padding: 8px 15px; /* Rectangular shape (wider than tall) */
             background: #666; /* Gray like iOS/Android */
             color: #fff; /* White text */
             border: 1px solid #666;
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
-            width: 40px;
+            width: 40px; /* Adjusted width for better fit */
             height: 40px;
             box-shadow: 0 2px 2px rgba(0,0,0,0.1);
-            margin: 2px;
             transition: background-color 0.1s ease; /* Quick transition for shading */
         }
         .key:hover, .key:active {
             background: #555; /* Darker gray on tap/hover */
+        }
+        .space-key {
+            width: 200px; /* Wider spacebar */
+        }
+        .shift-key {
+            background: #999; /* Lighter gray for shift key */
+            width: 60px;
+        }
+        .backspace-key {
+            width: 60px;
         }
         #result {
             display: none;
@@ -72,6 +103,7 @@
 <body>
     <div id="game">
         <h1>KeyTwist</h1>
+        <button id="start-button">Start</button>
         <p id="timer"></p>
         <div id="sentence"></div>
         <input id="input" type="text" readonly>
@@ -86,7 +118,7 @@
             .then(response => response.json())
             .then(levels => {
                 // Select level based on today's local date (e.g., America/Los_Angeles for PST)
-                const today = new Date().toLocaleDateString('en-US', { timeZone: 'America/New_York' }).split('/').map(p => p.padStart(2, '0')).join('-');
+                const today = new Date().toLocaleDateString('en-US', { timeZone: 'America/Los_Angeles' }).split('/').map(p => p.padStart(2, '0')).join('-');
                 const level = levels.find(l => l.date === today) || levels[0]; // Fallback to first level if date not found
 
                 // Parse swapped keys into a mapping (default QWERTY vs. swapped)
@@ -106,48 +138,94 @@
                 const timerEl = document.getElementById("timer");
                 const keyboardEl = document.getElementById("keyboard");
                 const resultEl = document.getElementById("result");
+                const startButton = document.getElementById("start-button");
 
-                // Display sentence and timer
+                // Display sentence (hidden until start)
                 sentenceEl.textContent = level.text;
                 timerEl.textContent = `${timeLeft.toFixed(1)}s`;
 
-                // Build QWERTY keyboard matching iOS/Android layout (3 rows)
+                // Build QWERTY keyboard with exactly 3 rows
                 const rows = [
-                    "qwertyuiop",
-                    "asdfghjkl",
-                    "zxcvbnm"
+                    "qwertyuiop", // Row 1: 10 keys
+                    "asdfghjkl",  // Row 2: 9 keys
+                    "zxcvbnm"     // Row 3: 7 keys + shift + backspace
                 ];
-                rows.forEach(row => {
-                    row.split("").forEach(key => {
-                        const btn = document.createElement("button");
-                        btn.className = "key";
-                        btn.textContent = keyMap[key] || key; // Show swapped key
-                        btn.onclick = (event) => handleKey(key, event); // Pass original key and event
-                        keyboardEl.appendChild(btn);
-                    });
+
+                // Row 1: qwertyuiop
+                const row1 = document.createElement("div");
+                row1.className = "row";
+                rows[0].split("").forEach(key => {
+                    const btn = document.createElement("button");
+                    btn.className = "key";
+                    btn.textContent = keyMap[key] || key; // Show swapped key
+                    btn.onclick = (event) => handleKey(key, event); // Pass original key and event
+                    row1.appendChild(btn);
+                });
+                keyboardEl.appendChild(row1);
+
+                // Row 2: asdfghjkl
+                const row2 = document.createElement("div");
+                row2.className = "row";
+                rows[1].split("").forEach(key => {
+                    const btn = document.createElement("button");
+                    btn.className = "key";
+                    btn.textContent = keyMap[key] || key; // Show swapped key
+                    btn.onclick = (event) => handleKey(key, event); // Pass original key and event
+                    row2.appendChild(btn);
+                });
+                keyboardEl.appendChild(row2);
+
+                // Row 3: shift + zxcvbnm + backspace + space
+                const row3 = document.createElement("div");
+                row3.className = "row";
+                
+                // Shift key (placeholder)
+                const shift = document.createElement("button");
+                shift.className = "key shift-key";
+                shift.textContent = "↑";
+                shift.disabled = true; // Placeholder for now
+                row3.appendChild(shift);
+
+                // zxcvbnm
+                rows[2].split("").forEach(key => {
+                    const btn = document.createElement("button");
+                    btn.className = "key";
+                    btn.textContent = keyMap[key] || key; // Show swapped key
+                    btn.onclick = (event) => handleKey(key, event); // Pass original key and event
+                    row3.appendChild(btn);
                 });
 
-                // Add backspace and space below
+                // Backspace
                 const backspace = document.createElement("button");
-                backspace.className = "key";
+                backspace.className = "key backspace-key";
                 backspace.textContent = "⌫";
-                backspace.style.width = "60px";
                 backspace.onclick = () => handleBackspace();
-                keyboardEl.appendChild(backspace);
+                row3.appendChild(backspace);
 
+                // Spacebar (on the same row)
                 const space = document.createElement("button");
-                space.className = "key";
+                space.className = "key space-key";
                 space.textContent = "space";
-                space.style.width = "200px";
                 space.onclick = () => handleKey(" ");
-                keyboardEl.appendChild(space);
+                row3.appendChild(space);
 
-                // Start timer
-                timer = setInterval(() => {
-                    timeLeft -= 0.1;
-                    timerEl.textContent = `${timeLeft.toFixed(1)}s`;
-                    if (timeLeft <= 0) endGame(false);
-                }, 100);
+                keyboardEl.appendChild(row3);
+
+                // Start button functionality
+                startButton.onclick = () => {
+                    startButton.style.display = "none"; // Hide Start button
+                    sentenceEl.style.display = "block"; // Show sentence
+                    timerEl.style.display = "block"; // Show timer
+                    keyboardEl.style.display = "flex"; // Show keyboard
+                    inputEl.focus(); // Focus on input
+
+                    // Start timer
+                    timer = setInterval(() => {
+                        timeLeft -= 0.1;
+                        timerEl.textContent = `${timeLeft.toFixed(1)}s`;
+                        if (timeLeft <= 0) endGame(false);
+                    }, 100);
+                };
 
                 // Handle key press with shading reset
                 function handleKey(originalKey, event) {
@@ -191,7 +269,7 @@
 
                 // Local storage for streak
                 function saveResult(score) {
-                    const today = new Date().toISOString().split("T")[0];
+                    const today = new Date().toLocaleDateString('en-US', { timeZone: 'America/Los_Angeles' }).split('/').map(p => p.padStart(2, '0')).join('-');
                     localStorage.setItem(today, score);
                     const streak = calculateStreak();
                     resultEl.textContent += ` | Streak: ${streak} days`;
@@ -200,7 +278,7 @@
                 function calculateStreak() {
                     let streak = 0;
                     let date = new Date();
-                    while (localStorage.getItem(date.toISOString().split("T")[0])) {
+                    while (localStorage.getItem(date.toLocaleDateString('en-US', { timeZone: 'America/Los_Angeles' }).split('/').map(p => p.padStart(2, '0')).join('-'))) {
                         streak++;
                         date.setDate(date.getDate() - 1);
                     }
