@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>KeyTwist - Daily Typing Challenge</title>
     <style>
         body {
@@ -10,6 +10,7 @@
             text-align: center;
             padding: 20px;
             background: #f0f0f0;
+            touch-action: manipulation;
         }
         #game {
             max-width: 600px;
@@ -38,19 +39,20 @@
         }
         .key {
             padding: 10px 15px;
-            background: #fff;
-            color: #000;
-            border: 1px solid #ccc;
+            background: #666; /* Gray like iOS/Android */
+            color: #fff; /* White text */
+            border: 1px solid #666;
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
             width: 40px;
             height: 40px;
             box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+            margin: 2px;
+            transition: background-color 0.1s ease; /* Quick transition for shading */
         }
         .key:hover, .key:active {
-            background: #e0e0e0;
-            border-color: #999;
+            background: #555; /* Darker gray on tap/hover */
         }
         #result {
             display: none;
@@ -83,8 +85,8 @@
         fetch('data/levels.json')
             .then(response => response.json())
             .then(levels => {
-                // Select level based on today's date
-                const today = new Date().toISOString().split("T")[0];
+                // Select level based on today's local date (e.g., America/Los_Angeles for PST)
+                const today = new Date().toLocaleDateString('en-US', { timeZone: 'America/New_York' }).split('/').map(p => p.padStart(2, '0')).join('-');
                 const level = levels.find(l => l.date === today) || levels[0]; // Fallback to first level if date not found
 
                 // Parse swapped keys into a mapping (default QWERTY vs. swapped)
@@ -109,7 +111,7 @@
                 sentenceEl.textContent = level.text;
                 timerEl.textContent = `${timeLeft.toFixed(1)}s`;
 
-                // Build QWERTY keyboard matching iOS/Android layout (4 rows)
+                // Build QWERTY keyboard matching iOS/Android layout (3 rows)
                 const rows = [
                     "qwertyuiop",
                     "asdfghjkl",
@@ -120,22 +122,23 @@
                         const btn = document.createElement("button");
                         btn.className = "key";
                         btn.textContent = keyMap[key] || key; // Show swapped key
-                        btn.onclick = () => handleKey(key); // Pass original key
+                        btn.onclick = (event) => handleKey(key, event); // Pass original key and event
                         keyboardEl.appendChild(btn);
                     });
                 });
 
-                // Add backspace and space
+                // Add backspace and space below
                 const backspace = document.createElement("button");
                 backspace.className = "key";
                 backspace.textContent = "⌫";
+                backspace.style.width = "60px";
                 backspace.onclick = () => handleBackspace();
                 keyboardEl.appendChild(backspace);
 
                 const space = document.createElement("button");
                 space.className = "key";
                 space.textContent = "space";
-                space.style.width = "120px";
+                space.style.width = "200px";
                 space.onclick = () => handleKey(" ");
                 keyboardEl.appendChild(space);
 
@@ -146,8 +149,8 @@
                     if (timeLeft <= 0) endGame(false);
                 }, 100);
 
-                // Handle key press
-                function handleKey(originalKey) {
+                // Handle key press with shading reset
+                function handleKey(originalKey, event) {
                     if (originalKey === " ") {
                         input += " ";
                     } else {
@@ -156,6 +159,13 @@
                     }
                     inputEl.value = input;
                     if (input === level.text.toLowerCase()) endGame(true);
+
+                    // Reset key color after 100ms
+                    const keyBtn = event.target;
+                    keyBtn.style.background = "#555"; // Darker gray on tap
+                    setTimeout(() => {
+                        keyBtn.style.background = "#666"; // Revert to normal gray
+                    }, 100);
                 }
 
                 // Handle backspace
