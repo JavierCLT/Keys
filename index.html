@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyTwist - Daily Typing Challenge</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        #game {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        #sentence {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+        #input {
+            width: 90%;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 10px;
+        }
+        #timer {
+            font-size: 20px;
+            color: #e74c3c;
+        }
+        #keyboard {
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 3px;
+        }
+        .key {
+            padding: 10px 15px;
+            background: #fff;
+            color: #000;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 40px;
+            height: 40px;
+            box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+        }
+        .key:hover, .key:active {
+            background: #e0e0e0;
+            border-color: #999;
+        }
+        #result {
+            display: none;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        #desktop-warning {
+            display: none;
+            color: #e74c3c;
+        }
+        @media (min-width: 768px) {
+            #desktop-warning { display: block; }
+            #keyboard { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div id="game">
+        <h1>KeyTwist</h1>
+        <p id="timer"></p>
+        <div id="sentence"></div>
+        <input id="input" type="text" readonly>
+        <div id="keyboard"></div>
+        <div id="desktop-warning">Please use your phone for the full swapped-key experience!</div>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        // Load levels from JSON file
+        fetch('data/levels.json')
+            .then(response => response.json())
+            .then(levels => {
+                // Select level based on today's date
+                const today = new Date().toISOString().split("T")[0];
+                const level = levels.find(l => l.date === today) || levels[0]; // Fallback to first level if date not found
+
+                // Parse swapped keys into a mapping (default QWERTY vs. swapped)
+                const defaultKeys = "q,w,e,r,t,y,u,i,o,p,a,s,d,f,g,h,j,k,l,z,x,c,v,b,n,m".split(",");
+                const swappedKeys = level.character_key.split(",");
+                const keyMap = {};
+                for (let i = 0; i < defaultKeys.length; i++) {
+                    keyMap[defaultKeys[i]] = swappedKeys[i];
+                }
+
+                // Game state
+                let timeLeft = level.time;
+                let timer;
+                let input = "";
+                const sentenceEl = document.getElementById("sentence");
+                const inputEl = document.getElementById("input");
+                const timerEl = document.getElementById("timer");
+                const keyboardEl = document.getElementById("keyboard");
+                const resultEl = document.getElementById("result");
+
+                // Display sentence and timer
+                sentenceEl.textContent = level.text;
+                timerEl.textContent = `${timeLeft.toFixed(1)}s`;
+
+                // Build QWERTY keyboard matching iOS/Android layout (4 rows)
+                const rows = [
+                    "qwertyuiop",
+                    "asdfghjkl",
+                    "zxcvbnm"
+                ];
+                rows.forEach(row => {
+                    row.split("").forEach(key => {
+                        const btn = document.createElement("button");
+                        btn.className = "key";
+                        btn.textContent = keyMap[key] || key; // Show swapped key
+                        btn.onclick = () => handleKey(key); // Pass original key
+                        keyboardEl.appendChild(btn);
+                    });
+                });
+
+                // Add backspace and space
+                const backspace = document.createElement("button");
+                backspace.className = "key";
+                backspace.textContent = "⌫";
+                backspace.onclick = () => handleBackspace();
+                keyboardEl.appendChild(backspace);
+
+                const space = document.createElement("button");
+                space.className = "key";
+                space.textContent = "space";
+                space.style.width = "120px";
+                space.onclick = () => handleKey(" ");
+                keyboardEl.appendChild(space);
+
+                // Start timer
+                timer = setInterval(() => {
+                    timeLeft -= 0.1;
+                    timerEl.textContent = `${timeLeft.toFixed(1)}s`;
+                    if (timeLeft <= 0) endGame(false);
+                }, 100);
+
+                // Handle key press
+                function handleKey(originalKey) {
+                    if (originalKey === " ") {
+                        input += " ";
+                    } else {
+                        const swappedKey = keyMap[originalKey] || originalKey;
+                        input += swappedKey.toLowerCase();
+                    }
+                    inputEl.value = input;
+                    if (input === level.text.toLowerCase()) endGame(true);
+                }
+
+                // Handle backspace
+                function handleBackspace() {
+                    input = input.slice(0, -1);
+                    inputEl.value = input;
+                }
+
+                // End game and score (0-100)
+                function endGame(success) {
+                    clearInterval(timer);
+                    if (!success) {
+                        resultEl.textContent = "Time’s up! Score: 0/100";
+                    } else {
+                        const practicalMax = level.time * 0.66; // 100 = 66% time left
+                        const score = Math.min(100, Math.floor((timeLeft / practicalMax) * 100));
+                        resultEl.textContent = `Score: ${score}/100 in ${(level.time - timeLeft).toFixed(1)}s - ${level.author}`;
+                        saveResult(score);
+                    }
+                    resultEl.style.display = "block";
+                    keyboardEl.style.display = "none";
+                }
+
+                // Local storage for streak
+                function saveResult(score) {
+                    const today = new Date().toISOString().split("T")[0];
+                    localStorage.setItem(today, score);
+                    const streak = calculateStreak();
+                    resultEl.textContent += ` | Streak: ${streak} days`;
+                }
+
+                function calculateStreak() {
+                    let streak = 0;
+                    let date = new Date();
+                    while (localStorage.getItem(date.toISOString().split("T")[0])) {
+                        streak++;
+                        date.setDate(date.getDate() - 1);
+                    }
+                    return streak;
+                }
+            })
+            .catch(error => console.error('Error loading levels:', error));
+    </script>
+</body>
+</html>
