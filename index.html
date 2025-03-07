@@ -60,14 +60,13 @@
             gap: 3px;
         }
         .key {
-            padding: 8px 15px; /* Rectangular shape (wider than tall) */
+            padding: 8px 18px; /* Rectangular shape (wider than tall) */
             background: #666; /* Gray like iOS/Android */
             color: #fff; /* White text */
             border: 1px solid #666;
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
-            width: 40px; /* Adjusted width for better fit */
             height: 40px;
             box-shadow: 0 2px 2px rgba(0,0,0,0.1);
             transition: background-color 0.1s ease; /* Quick transition for shading */
@@ -76,7 +75,7 @@
             background: #555; /* Darker gray on tap/hover */
         }
         .space-key {
-            width: 200px; /* Wider spacebar */
+            width: 240px; /* Wider spacebar to match iOS/Android */
         }
         .shift-key {
             background: #999; /* Lighter gray for shift key */
@@ -148,7 +147,7 @@
                 const rows = [
                     "qwertyuiop", // Row 1: 10 keys
                     "asdfghjkl",  // Row 2: 9 keys
-                    "zxcvbnm"     // Row 3: 7 keys + shift + backspace
+                    "zxcvbnm"     // Row 3: 7 keys + shift + backspace + space
                 ];
 
                 // Row 1: qwertyuiop
@@ -202,7 +201,7 @@
                 backspace.onclick = () => handleBackspace();
                 row3.appendChild(backspace);
 
-                // Spacebar (on the same row)
+                // Spacebar
                 const space = document.createElement("button");
                 space.className = "key space-key";
                 space.textContent = "space";
