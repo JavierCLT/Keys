@@ -129,11 +129,11 @@
                 const level = levels.find(l => l.date === today) || levels[0]; // Fallback to first level if date not found
 
                 // Parse swapped keys into a mapping (default QWERTY vs. swapped)
-                const defaultKeys = "q,w,e,r,t,y,u,i,o,p,a,s,d,f,g,h,j,k,l,z,x,c,v,b,n,m".split(",");
+                const defaultKeys = "qwertyuiopasdfghjklzxcvbnm".split(""); // Full alphabet
                 const swappedKeys = level.character_key.split(",");
                 const keyMap = {};
                 for (let i = 0; i < defaultKeys.length; i++) {
-                    keyMap[defaultKeys[i]] = swappedKeys[i];
+                    keyMap[defaultKeys[i]] = swappedKeys[i] || defaultKeys[i]; // Ensure all 26 keys mapped
                 }
 
                 // Game state
@@ -151,14 +151,14 @@
                 sentenceEl.textContent = level.text;
                 timerEl.textContent = `${timeLeft.toFixed(1)}s`;
 
-                // Build QWERTY keyboard with 3 letter rows + 1 spacebar row
+                // Build QWERTY keyboard with 10-10-7 distribution + backspace + spacebar
                 const rows = [
                     "qwertyuiop", // Row 1: 10 keys
-                    "asdfghjkl",  // Row 2: 9 keys
-                    "zxcvbnm"     // Row 3: 7 keys + backspace
+                    "asdfghjkl;", // Row 2: 10 keys (add ; as placeholder)
+                    "zxcvbnm"     // Row 3: 7 keys
                 ];
 
-                // Row 1: qwertyuiop
+                // Row 1: 10 keys
                 const row1 = document.createElement("div");
                 row1.className = "row";
                 rows[0].split("").forEach(key => {
@@ -170,7 +170,7 @@
                 });
                 keyboardEl.appendChild(row1);
 
-                // Row 2: asdfghjkl
+                // Row 2: 10 keys
                 const row2 = document.createElement("div");
                 row2.className = "row";
                 rows[1].split("").forEach(key => {
@@ -182,11 +182,9 @@
                 });
                 keyboardEl.appendChild(row2);
 
-                // Row 3: zxcvbnm + backspace
+                // Row 3: 7 keys + backspace
                 const row3 = document.createElement("div");
                 row3.className = "row";
-                
-                // zxcvbnm
                 rows[2].split("").forEach(key => {
                     const btn = document.createElement("button");
                     btn.className = "key";
