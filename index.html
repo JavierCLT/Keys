@@ -386,8 +386,8 @@
                     } else {
                         const practicalMax = level.time * 0.66;
                         const score = Math.min(100, Math.floor((timeLeft / practicalMax) * 100));
-                        const author = level.author || "Unknown"; // Default if undefined
-                        resultEl.textContent = `Score: ${score}/100 in ${(level.time - timeLeft).toFixed(1)}s - ${author}`;
+                        
+                        resultEl.textContent = `Score: ${score}/100 in ${(level.time - timeLeft).toFixed(1)}s`;
                         saveResult(score);
                     }
                     resultEl.style.display = "block";
