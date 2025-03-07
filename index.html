@@ -19,7 +19,16 @@
         #sentence {
             font-size: 20px;
             margin: 20px 0;
-            display: none; /* Hidden until Start */
+            display: none;
+        }
+        #sentence span {
+            transition: color 0.2s ease; /* Smooth color change */
+        }
+        .correct {
+            color: #2ecc71; /* Green */
+        }
+        .incorrect {
+            color: #e74c3c; /* Red */
         }
         #input {
             width: 90%;
@@ -30,9 +39,9 @@
         #timer {
             font-size: 20px;
             color: #e74c3c;
-            display: none; /* Hidden until Start */
+            display: none;
         }
-        #start-button {
+        #start-button, #retry-button {
             padding: 15px 30px;
             font-size: 18px;
             background: #3498db;
@@ -42,8 +51,11 @@
             cursor: pointer;
             margin: 20px 0;
         }
-        #start-button:hover {
+        #start-button:hover, #retry-button:hover {
             background: #2980b9;
+        }
+        #retry-button {
+            display: none;
         }
         #keyboard {
             margin: 20px auto;
@@ -51,8 +63,8 @@
             flex-direction: column;
             align-items: center;
             gap: 5px;
-            max-width: 95vw; /* Increased width to fit all keys */
-            display: none; /* Hidden until Start */
+            max-width: 95vw;
+            display: none;
         }
         .row {
             display: flex;
@@ -66,31 +78,33 @@
             width: 100%;
         }
         .key {
-            padding: 0; /* Remove padding for consistency */
-            background: #666; /* Gray like iOS/Android */
-            color: #fff; /* White text */
+            padding: 0;
+            background: #666 multidrug
+
+;
+            color: #fff;
             border: 1px solid #666;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 19px; /* Reduced font size */
-            width: 35px; /* Reduced width */
-            height: 45px; /* Reduced height, still taller than wide */
+            font-size: 19px;
+            width: 35px;
+            height: 45px;
             box-shadow: 0 2px 2px rgba(0,0,0,0.1);
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: background-color 0.1s ease; /* Quick transition for shading */
+            transition: background-color 0.1s ease;
         }
         .key:hover, .key:active {
-            background: #555; /* Darker gray on tap/hover */
+            background: #555;
         }
         .space-key {
-            width: 260px; /* Reduced width to fit screen */
-            height: 45px; /* Match key height */
+            width: 200px;
+            height: 45px;
         }
-        .backspace-key {
-            width: 50px; /* Reduced width */
-            height: 45px; /* Match key height */
+        .backspace-key, .period-key {
+            width: 50px;
+            height: 45px;
         }
         #result {
             display: none;
@@ -111,6 +125,7 @@
     <div id="game">
         <h1>KeyTwist</h1>
         <button id="start-button">Start</button>
+        <button id="retry-button">Retry</button>
         <p id="timer"></p>
         <div id="sentence"></div>
         <input id="input" type="text" readonly>
@@ -120,89 +135,90 @@
     </div>
 
     <script>
-        // Load levels from JSON file
         fetch('data/levels.json')
             .then(response => response.json())
             .then(levels => {
-                // Select level based on today's local date (e.g., America/Los_Angeles for PST)
                 const today = new Date().toLocaleDateString('en-US', { timeZone: 'America/Los_Angeles' }).split('/').map(p => p.padStart(2, '0')).join('-');
-                const level = levels.find(l => l.date === today) || levels[0]; // Fallback to first level if date not found
+                const level = levels.find(l => l.date === today) || levels[0];
 
-                // Parse swapped keys into a mapping (default QWERTY vs. swapped)
-                const defaultKeys = "qwertyuiopasdfghjklzxcvbnm".split(""); // Full alphabet
+                const defaultKeys = "qwertyuiopasdfghjklzxcvbnm".split("");
                 const swappedKeys = level.character_key.split(",");
                 const keyMap = {};
                 for (let i = 0; i < defaultKeys.length; i++) {
-                    keyMap[defaultKeys[i]] = swappedKeys[i] || defaultKeys[i]; // Ensure all 26 keys mapped
+                    keyMap[defaultKeys[i]] = swappedKeys[i] || defaultKeys[i];
                 }
 
-                // Game state
-                let timeLeft = level.time;
-                let timer;
-                let input = "";
+                let timeLeft, timer, input = "";
                 const sentenceEl = document.getElementById("sentence");
                 const inputEl = document.getElementById("input");
                 const timerEl = document.getElementById("timer");
                 const keyboardEl = document.getElementById("keyboard");
                 const resultEl = document.getElementById("result");
                 const startButton = document.getElementById("start-button");
+                const retryButton = document.getElementById("retry-button");
 
-                // Display sentence (hidden until start)
-                sentenceEl.textContent = level.text;
-                timerEl.textContent = `${timeLeft.toFixed(1)}s`;
+                // Initialize sentence with spans
+                function setupSentence() {
+                    sentenceEl.innerHTML = "";
+                    level.text.split("").forEach(char => {
+                        const span = document.createElement("span");
+                        span.textContent = char;
+                        sentenceEl.appendChild(span);
+                    });
+                }
 
-                // Build QWERTY keyboard with 10-10-7 distribution + backspace + spacebar
-                const rows = [
-                    "qwertyuiop", // Row 1: 10 keys
-                    "asdfghjkl", // Row 2: 9 keys (add ; as placeholder)
-                    "zxcvbnm"     // Row 3: 7 keys
-                ];
+                // Update letter colors
+                function updateColors() {
+                    const spans = sentenceEl.querySelectorAll("span");
+                    spans.forEach((span, index) => {
+                        if (index < input.length) {
+                            span.className = input[index].toLowerCase() === level.text[index].toLowerCase() ? "correct" : "incorrect";
+                        } else {
+                            span.className = ""; // Black (default)
+                        }
+                    });
+                }
 
-                // Row 1: 10 keys
-                const row1 = document.createElement("div");
-                row1.className = "row";
-                rows[0].split("").forEach(key => {
-                    const btn = document.createElement("button");
-                    btn.className = "key";
-                    btn.textContent = keyMap[key] || key; // Show swapped key
-                    btn.onclick = (event) => handleKey(key, event); // Pass original key and event
-                    row1.appendChild(btn);
+                // Reset game state
+                function resetGame() {
+                    timeLeft = level.time;
+                    input = "";
+                    setupSentence();
+                    timerEl.textContent = `${timeLeft.toFixed(1)}s`;
+                    inputEl.value = "";
+                    resultEl.style.display = "none";
+                    retryButton.style.display = "none";
+                    startButton.style.display = "block";
+                    keyboardEl.style.display = "none";
+                    sentenceEl.style.display = "none";
+                    timerEl.style.display = "none";
+                    clearInterval(timer);
+                }
+                resetGame();
+
+                // Build keyboard
+                const rows = ["qwertyuiop", "asdfghjkl", "zxcvbnm"];
+                rows.forEach(row => {
+                    const rowEl = document.createElement("div");
+                    rowEl.className = "row";
+                    row.split("").forEach(key => {
+                        const btn = document.createElement("button");
+                        btn.className = "key";
+                        btn.textContent = keyMap[key] || key;
+                        btn.onclick = (event) => handleKey(key, event);
+                        rowEl.appendChild(btn);
+                    });
+                    if (row === "zxcvbnm") {
+                        const backspace = document.createElement("button");
+                        backspace.className = "key backspace-key";
+                        backspace.textContent = "⌫";
+                        backspace.onclick = () => handleBackspace();
+                        rowEl.appendChild(backspace);
+                    }
+                    keyboardEl.appendChild(rowEl);
                 });
-                keyboardEl.appendChild(row1);
 
-                // Row 2: 10 keys
-                const row2 = document.createElement("div");
-                row2.className = "row";
-                rows[1].split("").forEach(key => {
-                    const btn = document.createElement("button");
-                    btn.className = "key";
-                    btn.textContent = keyMap[key] || key; // Show swapped key
-                    btn.onclick = (event) => handleKey(key, event); // Pass original key and event
-                    row2.appendChild(btn);
-                });
-                keyboardEl.appendChild(row2);
-
-                // Row 3: 7 keys + backspace
-                const row3 = document.createElement("div");
-                row3.className = "row";
-                rows[2].split("").forEach(key => {
-                    const btn = document.createElement("button");
-                    btn.className = "key";
-                    btn.textContent = keyMap[key] || key; // Show swapped key
-                    btn.onclick = (event) => handleKey(key, event); // Pass original key and event
-                    row3.appendChild(btn);
-                });
-
-                // Backspace
-                const backspace = document.createElement("button");
-                backspace.className = "key backspace-key";
-                backspace.textContent = "⌫";
-                backspace.onclick = () => handleBackspace();
-                row3.appendChild(backspace);
-
-                keyboardEl.appendChild(row3);
-
-                // Row 4: Spacebar (on its own row)
+                // Spacebar + Period row
                 const spaceRow = document.createElement("div");
                 spaceRow.className = "space-row";
                 const space = document.createElement("button");
@@ -210,17 +226,22 @@
                 space.textContent = "space";
                 space.onclick = () => handleKey(" ");
                 spaceRow.appendChild(space);
+
+                const period = document.createElement("button");
+                period.className = "key period-key";
+                period.textContent = ".";
+                period.onclick = () => handleKey(".");
+                spaceRow.appendChild(period);
                 keyboardEl.appendChild(spaceRow);
 
-                // Start button functionality
+                // Start game
                 startButton.onclick = () => {
-                    startButton.style.display = "none"; // Hide Start button
-                    sentenceEl.style.display = "block"; // Show sentence
-                    timerEl.style.display = "block"; // Show timer
-                    keyboardEl.style.display = "flex"; // Show keyboard
-                    inputEl.focus(); // Focus on input
+                    startButton.style.display = "none";
+                    sentenceEl.style.display = "block";
+                    timerEl.style.display = "block";
+                    keyboardEl.style.display = "flex";
+                    inputEl.focus();
 
-                    // Start timer
                     timer = setInterval(() => {
                         timeLeft -= 0.1;
                         timerEl.textContent = `${timeLeft.toFixed(1)}s`;
@@ -228,44 +249,51 @@
                     }, 100);
                 };
 
-                // Handle key press with shading reset
+                // Retry game
+                retryButton.onclick = () => {
+                    resetGame();
+                };
+
+                // Handle key press
                 function handleKey(originalKey, event) {
                     if (originalKey === " ") {
                         input += " ";
+                    } else if (originalKey === ".") {
+                        input += ".";
                     } else {
                         const swappedKey = keyMap[originalKey] || originalKey;
                         input += swappedKey.toLowerCase();
                     }
                     inputEl.value = input;
+                    updateColors();
                     if (input === level.text.toLowerCase()) endGame(true);
 
-                    // Reset key color after 100ms
                     const keyBtn = event.target;
-                    keyBtn.style.background = "#555"; // Darker gray on tap
-                    setTimeout(() => {
-                        keyBtn.style.background = "#666"; // Revert to normal gray
-                    }, 100);
+                    keyBtn.style.background = "#555";
+                    setTimeout(() => keyBtn.style.background = "#666", 100);
                 }
 
                 // Handle backspace
                 function handleBackspace() {
                     input = input.slice(0, -1);
                     inputEl.value = input;
+                    updateColors();
                 }
 
-                // End game and score (0-100)
+                // End game
                 function endGame(success) {
                     clearInterval(timer);
                     if (!success) {
                         resultEl.textContent = "Time’s up! Score: 0/100";
                     } else {
-                        const practicalMax = level.time * 0.66; // 100 = 66% time left
+                        const practicalMax = level.time * 0.66;
                         const score = Math.min(100, Math.floor((timeLeft / practicalMax) * 100));
                         resultEl.textContent = `Score: ${score}/100 in ${(level.time - timeLeft).toFixed(1)}s - ${level.author}`;
                         saveResult(score);
                     }
                     resultEl.style.display = "block";
                     keyboardEl.style.display = "none";
+                    retryButton.style.display = "block";
                 }
 
                 // Local storage for streak
