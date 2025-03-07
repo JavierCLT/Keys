@@ -245,7 +245,7 @@
 
                         // Handle key press with single event
                         btn.addEventListener("touchstart", (event) => {
-                            event.preventDefault(); // Prevent default behavior
+                            event.preventDefault();
                             highlight.style.display = "block";
                             handleKey(key, event);
                         }, { passive: false });
@@ -254,7 +254,7 @@
                         });
                         // Fallback for desktop testing
                         btn.addEventListener("mousedown", (event) => {
-                            event.preventDefault(); // Prevent default behavior
+                            event.preventDefault();
                             highlight.style.display = "block";
                             handleKey(key, event);
                         }, { passive: false });
@@ -386,7 +386,8 @@
                     } else {
                         const practicalMax = level.time * 0.66;
                         const score = Math.min(100, Math.floor((timeLeft / practicalMax) * 100));
-                        resultEl.textContent = `Score: ${score}/100 in ${(level.time - timeLeft).toFixed(1)}s - ${level.author}`;
+                        const author = level.author || "Unknown"; // Default if undefined
+                        resultEl.textContent = `Score: ${score}/100 in ${(level.time - timeLeft).toFixed(1)}s - ${author}`;
                         saveResult(score);
                     }
                     resultEl.style.display = "block";
@@ -398,7 +399,7 @@
                 function saveResult(score) {
                     const today = new Date().toLocaleDateString('en-US', { timeZone: 'America/Los_Angeles' }).split('/').map(p => p.padStart(2, '0')).join('-');
                     localStorage.setItem(today, score);
-                    const streak = calculateStreak();
+                    const streak = calculateStreak() || 0; // Default to 0 if undefined
                     resultEl.textContent += ` | Streak: ${streak} days`;
                 }
 
