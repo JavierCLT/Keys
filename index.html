@@ -66,15 +66,19 @@
             width: 100%;
         }
         .key {
-            padding: 8px 18px; /* Rectangular shape (wider than tall) */
+            padding: 0; /* Remove padding for consistency */
             background: #666; /* Gray like iOS/Android */
             color: #fff; /* White text */
             border: 1px solid #666;
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
-            height: 40px;
+            width: 40px; /* Wider than previous, but less than height */
+            height: 50px; /* Taller than width for rectangular shape */
             box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             transition: background-color 0.1s ease; /* Quick transition for shading */
         }
         .key:hover, .key:active {
@@ -82,13 +86,16 @@
         }
         .space-key {
             width: 300px; /* Wider spacebar to match iOS/Android */
+            height: 50px; /* Match key height */
         }
         .shift-key {
             background: #999; /* Lighter gray for shift key */
             width: 60px;
+            height: 50px;
         }
         .backspace-key {
             width: 60px;
+            height: 50px;
         }
         #result {
             display: none;
