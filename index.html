@@ -72,9 +72,9 @@
             border: 1px solid #666;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 16px;
-            width: 40px; /* Wider than previous, but less than height */
-            height: 50px; /* Taller than width for rectangular shape */
+            font-size: 14px; /* Reduced font size */
+            width: 35px; /* Reduced width */
+            height: 45px; /* Reduced height, still taller than wide */
             box-shadow: 0 2px 2px rgba(0,0,0,0.1);
             display: flex;
             align-items: center;
@@ -85,17 +85,12 @@
             background: #555; /* Darker gray on tap/hover */
         }
         .space-key {
-            width: 300px; /* Wider spacebar to match iOS/Android */
-            height: 50px; /* Match key height */
-        }
-        .shift-key {
-            background: #999; /* Lighter gray for shift key */
-            width: 60px;
-            height: 50px;
+            width: 260px; /* Reduced width to fit screen */
+            height: 45px; /* Match key height */
         }
         .backspace-key {
-            width: 60px;
-            height: 50px;
+            width: 50px; /* Reduced width */
+            height: 45px; /* Match key height */
         }
         #result {
             display: none;
@@ -160,7 +155,7 @@
                 const rows = [
                     "qwertyuiop", // Row 1: 10 keys
                     "asdfghjkl",  // Row 2: 9 keys
-                    "zxcvbnm"     // Row 3: 7 keys + shift + backspace
+                    "zxcvbnm"     // Row 3: 7 keys + backspace
                 ];
 
                 // Row 1: qwertyuiop
@@ -187,17 +182,10 @@
                 });
                 keyboardEl.appendChild(row2);
 
-                // Row 3: shift + zxcvbnm + backspace
+                // Row 3: zxcvbnm + backspace
                 const row3 = document.createElement("div");
                 row3.className = "row";
                 
-                // Shift key (placeholder)
-                const shift = document.createElement("button");
-                shift.className = "key shift-key";
-                shift.textContent = "↑";
-                shift.disabled = true; // Placeholder for now
-                row3.appendChild(shift);
-
                 // zxcvbnm
                 rows[2].split("").forEach(key => {
                     const btn = document.createElement("button");
