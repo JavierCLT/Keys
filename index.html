@@ -22,13 +22,13 @@
             display: none;
         }
         #sentence span {
-            transition: color 0.2s ease; /* Smooth color change */
+            transition: color 0.2s ease;
         }
         .correct {
-            color: #2ecc71; /* Green */
+            color: #2ecc71;
         }
         .incorrect {
-            color: #e74c3c; /* Red */
+            color: #e74c3c;
         }
         #input {
             width: 90%;
@@ -42,6 +42,8 @@
             display: none;
         }
         #start-button, #retry-button {
+            display: block; /* Ensure centering */
+            margin: 20px auto; /* Center horizontally */
             padding: 15px 30px;
             font-size: 18px;
             background: #3498db;
@@ -49,7 +51,6 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            margin: 20px 0;
         }
         #start-button:hover, #retry-button:hover {
             background: #2980b9;
@@ -65,6 +66,7 @@
             gap: 5px;
             max-width: 95vw;
             display: none;
+            background: transparent; /* Prevent light background */
         }
         .row {
             display: flex;
@@ -78,10 +80,9 @@
             width: 100%;
         }
         .key {
+            position: relative; /* For highlight positioning */
             padding: 0;
-            background: #666 multidrug
-
-;
+            background: #666;
             color: #fff;
             border: 1px solid #666;
             border-radius: 5px;
@@ -105,6 +106,20 @@
         .backspace-key, .period-key {
             width: 50px;
             height: 45px;
+        }
+        .key-highlight {
+            position: absolute;
+            top: -40px; /* Above the key */
+            left: 50%;
+            transform: translateX(-50%);
+            background: #333;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            display: none;
+            pointer-events: none;
+            z-index: 10;
         }
         #result {
             display: none;
@@ -174,7 +189,7 @@
                         if (index < input.length) {
                             span.className = input[index].toLowerCase() === level.text[index].toLowerCase() ? "correct" : "incorrect";
                         } else {
-                            span.className = ""; // Black (default)
+                            span.className = "";
                         }
                     });
                 }
@@ -196,6 +211,22 @@
                 }
                 resetGame();
 
+                // Start level (shared logic for Start and Retry)
+                function startLevel() {
+                    startButton.style.display = "none";
+                    retryButton.style.display = "none";
+                    sentenceEl.style.display = "block";
+                    timerEl.style.display = "block";
+                    keyboardEl.style.display = "flex";
+                    inputEl.focus();
+
+                    timer = setInterval(() => {
+                        timeLeft -= 0.1;
+                        timerEl.textContent = `${timeLeft.toFixed(1)}s`;
+                        if (timeLeft <= 0) endGame(false);
+                    }, 100);
+                }
+
                 // Build keyboard
                 const rows = ["qwertyuiop", "asdfghjkl", "zxcvbnm"];
                 rows.forEach(row => {
@@ -205,7 +236,30 @@
                         const btn = document.createElement("button");
                         btn.className = "key";
                         btn.textContent = keyMap[key] || key;
-                        btn.onclick = (event) => handleKey(key, event);
+
+                        // Add highlight div
+                        const highlight = document.createElement("div");
+                        highlight.className = "key-highlight";
+                        highlight.textContent = keyMap[key] || key;
+                        btn.appendChild(highlight);
+
+                        // Highlight on tap
+                        btn.addEventListener("touchstart", (event) => {
+                            highlight.style.display = "block";
+                            handleKey(key, event);
+                        });
+                        btn.addEventListener("touchend", () => {
+                            highlight.style.display = "none";
+                        });
+                        // Fallback for desktop testing
+                        btn.addEventListener("mousedown", (event) => {
+                            highlight.style.display = "block";
+                            handleKey(key, event);
+                        });
+                        btn.addEventListener("mouseup", () => {
+                            highlight.style.display = "none";
+                        });
+
                         rowEl.appendChild(btn);
                     });
                     if (row === "zxcvbnm") {
@@ -224,34 +278,65 @@
                 const space = document.createElement("button");
                 space.className = "key space-key";
                 space.textContent = "space";
-                space.onclick = () => handleKey(" ");
+
+                const spaceHighlight = document.createElement("div");
+                spaceHighlight.className = "key-highlight";
+                spaceHighlight.textContent = "space";
+                space.appendChild(spaceHighlight);
+
+                space.addEventListener("touchstart", (event) => {
+                    spaceHighlight.style.display = "block";
+                    handleKey(" ", event);
+                });
+                space.addEventListener("touchend", () => {
+                    spaceHighlight.style.display = "none";
+                });
+                space.addEventListener("mousedown", (event) => {
+                    spaceHighlight.style.display = "block";
+                    handleKey(" ", event);
+                });
+                space.addEventListener("mouseup", () => {
+                    spaceHighlight.style.display = "none";
+                });
+
                 spaceRow.appendChild(space);
 
                 const period = document.createElement("button");
                 period.className = "key period-key";
                 period.textContent = ".";
-                period.onclick = () => handleKey(".");
+
+                const periodHighlight = document.createElement("div");
+                periodHighlight.className = "key-highlight";
+                periodHighlight.textContent = ".";
+                period.appendChild(periodHighlight);
+
+                period.addEventListener("touchstart", (event) => {
+                    periodHighlight.style.display = "block";
+                    handleKey(".", event);
+                });
+                period.addEventListener("touchend", () => {
+                    periodHighlight.style.display = "none";
+                });
+                period.addEventListener("mousedown", (event) => {
+                    periodHighlight.style.display = "block";
+                    handleKey(".", event);
+                });
+                period.addEventListener("mouseup", () => {
+                    periodHighlight.style.display = "none";
+                });
+
                 spaceRow.appendChild(period);
                 keyboardEl.appendChild(spaceRow);
 
                 // Start game
                 startButton.onclick = () => {
-                    startButton.style.display = "none";
-                    sentenceEl.style.display = "block";
-                    timerEl.style.display = "block";
-                    keyboardEl.style.display = "flex";
-                    inputEl.focus();
-
-                    timer = setInterval(() => {
-                        timeLeft -= 0.1;
-                        timerEl.textContent = `${timeLeft.toFixed(1)}s`;
-                        if (timeLeft <= 0) endGame(false);
-                    }, 100);
+                    startLevel();
                 };
 
-                // Retry game
+                // Retry game (immediately restart level)
                 retryButton.onclick = () => {
                     resetGame();
+                    startLevel();
                 };
 
                 // Handle key press
