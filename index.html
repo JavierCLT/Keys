@@ -59,6 +59,12 @@
             justify-content: center;
             gap: 3px;
         }
+        .space-row {
+            display: flex;
+            justify-content: center;
+            gap: 3px;
+            width: 100%;
+        }
         .key {
             padding: 8px 18px; /* Rectangular shape (wider than tall) */
             background: #666; /* Gray like iOS/Android */
@@ -75,7 +81,7 @@
             background: #555; /* Darker gray on tap/hover */
         }
         .space-key {
-            width: 240px; /* Wider spacebar to match iOS/Android */
+            width: 300px; /* Wider spacebar to match iOS/Android */
         }
         .shift-key {
             background: #999; /* Lighter gray for shift key */
@@ -143,11 +149,11 @@
                 sentenceEl.textContent = level.text;
                 timerEl.textContent = `${timeLeft.toFixed(1)}s`;
 
-                // Build QWERTY keyboard with exactly 3 rows
+                // Build QWERTY keyboard with 3 letter rows + 1 spacebar row
                 const rows = [
                     "qwertyuiop", // Row 1: 10 keys
                     "asdfghjkl",  // Row 2: 9 keys
-                    "zxcvbnm"     // Row 3: 7 keys + shift + backspace + space
+                    "zxcvbnm"     // Row 3: 7 keys + shift + backspace
                 ];
 
                 // Row 1: qwertyuiop
@@ -174,7 +180,7 @@
                 });
                 keyboardEl.appendChild(row2);
 
-                // Row 3: shift + zxcvbnm + backspace + space
+                // Row 3: shift + zxcvbnm + backspace
                 const row3 = document.createElement("div");
                 row3.className = "row";
                 
@@ -201,14 +207,17 @@
                 backspace.onclick = () => handleBackspace();
                 row3.appendChild(backspace);
 
-                // Spacebar
+                keyboardEl.appendChild(row3);
+
+                // Row 4: Spacebar (on its own row)
+                const spaceRow = document.createElement("div");
+                spaceRow.className = "space-row";
                 const space = document.createElement("button");
                 space.className = "key space-key";
                 space.textContent = "space";
                 space.onclick = () => handleKey(" ");
-                row3.appendChild(space);
-
-                keyboardEl.appendChild(row3);
+                spaceRow.appendChild(space);
+                keyboardEl.appendChild(spaceRow);
 
                 // Start button functionality
                 startButton.onclick = () => {
